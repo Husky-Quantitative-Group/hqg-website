@@ -1,0 +1,142 @@
+.team {
+  padding: 3rem 20px;
+  min-height: calc(100vh - 70px - 300px);
+}
+
+.team .container > h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+.team-section {
+  margin-bottom: 4rem;
+}
+
+.team-section h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #002868;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.team-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #002868;
+  border-radius: 2px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.team-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 40, 104, 0.15);
+  border-color: #002868;
+}
+
+.team-avatar {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #002868, #003d99);
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+}
+
+.team-card h3 {
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.team-card .role {
+  color: #002868;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.team-card .bio {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.alumni-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.alumni-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #002868;
+}
+
+.alumni-card h3 {
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.alumni-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.alumni-card .current-role {
+  color: #002868;
+  font-weight: 600;
+}
+
+.jobs {
+  text-align: center;
+  background: linear-gradient(135deg, #f8f9fa, #e8eef7);
+  padding: 3rem 2rem;
+  border-radius: 8px;
+}
+
+.jobs h2 {
+  color: #002868;
+}
+
+.jobs p {
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.jobs .cta-button {
+  padding: 14px 32px;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-section h2::after {
+    width: 40px;
+  }
+}
