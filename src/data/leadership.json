@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Shium Mashud",
+    "role": "Portfolio Manager",
+    "headshot": "placeholder.png",
+    "linkedin": "https://www.linkedin.com/in/shium/"
+  },
+  {
+    "name": "Ethan Carty",
+    "role": "Quant Research Lead",
+    "headshot": "placeholder.png",
+    "linkedin": "https://www.linkedin.com/in/ethan-carty/"
+  },
+  {
+    "name": "Josef Karpinski",
+    "role": "Engineering lead",
+    "headshot": "placeholder.png",
+    "linkedin": "https://www.linkedin.com/in/josefkarpinski/"
+  },
+  {
+    "name": "Brendan Barnett",
+    "role": "Founder, Advisor",
+    "headshot": "brendan-barnett.jpg",
+    "linkedin": "https://www.linkedin.com/in/brendanabarnett/"
+  }
+]

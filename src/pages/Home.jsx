@@ -6,8 +6,9 @@ import presentation2 from '../assets/groupshots/presentation2.jpg';
 import presentation3 from '../assets/groupshots/presentation3.jpg';
 import presentation4 from '../assets/groupshots/presentation4.png';
 
+// TODO: make better; + community
 function Home() {
-  // Placement data
+  // TODO: add logos
   const placements = [
     { company: 'SpaceX', role: 'Software Engineer' },
     { company: 'Pure Storage', role: 'Software Engineer' },
@@ -17,9 +18,9 @@ function Home() {
     { company: 'Epic Systems', role: 'Software Engineer' },
     { company: 'Capital One', role: 'Software Engineer' },
     { company: 'JPMorgan Chase', role: 'Software Engineer' },
-    { company: 'NASA', role: 'Machine Learning Engineer' },
+    { company: 'IBM', role: 'Quantum Software Engineer' },
     { company: 'Coherent Semiconductors', role: 'AI Engineer' },
-    { company: 'Cornell', role: 'RL Researcher' },
+    { company: 'Cornell', role: 'Reinforcement Learning Researcher' },
     { company: 'UCF', role: 'Aerospace PhD' },
   ];
 

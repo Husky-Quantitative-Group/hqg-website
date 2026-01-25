@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Micah Banschick",
+    "role": "Researcher",
+    "headshot": "placeholder.png",
+    "linkedin": "https://www.linkedin.com/in/micah-banschick/"
+  },
+  {
+    "name": "Shawn Spitzel",
+    "role": "Developer",
+    "headshot": "placeholder.png",
+    "linkedin": "https://www.linkedin.com/in/shawn-spitzel-b16b47298/"
+  },
+  {
+    "name": "Soonwoo Kwon",
+    "role": "Developer",
+    "headshot": "placeholder.png",
+    "linkedin": "https://www.linkedin.com/in/soonwook/"
+  }, 
+  {
+    "name": "Albert Mundadan",
+    "role": "Developer",
+    "headshot": "placeholder.png",
+    "linkedin": "https://www.linkedin.com/in/albert-mundadan/"
+  },
+  {
+    "name": "Emmet Spaeth",
+    "role": "Researcher",
+    "headshot": "placeholder.png",
+    "linkedin": "https://www.linkedin.com/in/emmet-spaeth-136165309/"
+  },
+  {
+    "name": "Ethan Thomas",
+    "role": "Developer",
+    "headshot": "placeholder.png",
+    "linkedin": "https://www.linkedin.com/in/ethanthomas0/"
+  },
+  {
+    "name": "Grace McPadden",
+    "role": "Researcher",
+    "headshot": "placeholder.png",
+    "linkedin": "https://www.linkedin.com/in/grace-mcpadden/"
+  },
+  {
+    "name": "Katrina Melnik",
+    "role": "Researcher",
+    "headshot": "placeholder.png",
+    "linkedin": "https://www.linkedin.com/in/katrina-melnik-b4b559241/"
+  },
+  {
+    "name": "Parth Danve",
+    "role": "Researcher",
+    "headshot": "placeholder.png",
+    "linkedin": "https://www.linkedin.com/in/parthdanve39/"
+  }
+]
