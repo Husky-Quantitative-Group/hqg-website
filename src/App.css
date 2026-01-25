@@ -110,6 +110,9 @@ button {
   background-color: var(--color-accent);
   color: #000000;
   border-color: var(--color-accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 }
 
 .cta-button:hover {

@@ -127,7 +127,7 @@ function Team() {
         <section className="team-section jobs">
           <h2>Join Our Team</h2>
           <p>We're always looking for ambitious students interested in quantitative finance, software engineering, and research.</p>
-          <button className="cta-button">Apply Now!</button>
+          <a className="cta-button" href="/apply">Apply Now!</a>
         </section>
       </div>
     </div>
