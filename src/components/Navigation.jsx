@@ -9,7 +9,7 @@ function Navigation() {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          HQG
+          <img src="/alt_logo_no_bg.png" alt="HQG Logo" className="nav-logo-img" />
         </Link>
         <button 
           className="hamburger"

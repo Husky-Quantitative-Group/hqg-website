@@ -1,16 +1,18 @@
 .navbar {
   background-color: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .nav-container {
-  max-width: 1200px;
+  width: 100%;
+  max-width: none;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 clamp(10px, 2vw, 24px);
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,21 +20,27 @@
 }
 
 .nav-logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #ffffff;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .nav-logo:hover {
-  color: #cccccc;
+  opacity: 0.8;
+}
+
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-menu {
   display: flex;
   list-style: none;
   gap: 2rem;
+  padding: 0;
 }
 
 .nav-item {
@@ -40,7 +48,7 @@
 }
 
 .nav-link {
-  color: #cccccc;
+  color: var(--color-muted);
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
@@ -50,8 +58,8 @@
 }
 
 .nav-link:hover {
-  color: #ffffff;
-  border-bottom-color: #ffffff;
+  color: var(--color-text);
+  border-bottom-color: var(--color-text);
 }
 
 .hamburger {
@@ -66,7 +74,7 @@
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: #ffffff;
+  background-color: var(--color-text);
   margin: 5px 0;
   transition: all 0.3s ease;
   border-radius: 2px;
@@ -105,12 +113,12 @@
 
   .nav-menu.active {
     max-height: 400px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--color-border);
   }
 
   .nav-item {
     padding: 1rem 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--color-border);
   }
 
   .nav-link {

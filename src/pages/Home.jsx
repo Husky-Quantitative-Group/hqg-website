@@ -19,7 +19,7 @@ function Home() {
     { company: 'JPMorgan Chase', role: 'Software Engineer' },
     { company: 'NASA', role: 'Machine Learning Engineer' },
     { company: 'Coherent Semiconductors', role: 'AI Engineer' },
-    { company: 'Cornell', role: 'Data Scientist' },
+    { company: 'Cornell', role: 'RL Researcher' },
     { company: 'UCF', role: 'Aerospace PhD' },
   ];
 
@@ -37,7 +37,7 @@ function Home() {
       <section className="mission-section">
         <div className="container">
           <p className="mission-oneliner">
-            Our mission is to build and sustain the largest student-run quant fund in the U.S. by AUM
+            Becoming the largest student-run systematic fund in the U.S. by AUM
             </p>
           
           <div className="what-we-do-section">
@@ -48,10 +48,11 @@ function Home() {
               <img src={presentation4} alt="HQG Group Presentation" />
             </div>
             <div className="what-we-do-content">
-              <h2 className="what-we-do-title">What we do</h2>
+              {/* TODO: consider making this more like MIG; "who we are" + paragraph form -- community focused */}
+              <h2 className="what-we-do-title">What We Do</h2>
               <ul className="what-we-do-list">
-                <li>Establish UConn as a leader in Quant Finance through experiential learning.</li>
                 <li>Give students the experience, ownership, skills, and connections needed to get top-tier jobs.</li>
+                <li>Build a community of the most amibitous students at UConn so we can inspire each other.</li>
               </ul>
             </div>
           </div>
@@ -61,7 +62,7 @@ function Home() {
       {/* Outcomes Section */}
       <section className="outcomes-section">
         <div className="container">
-          <h2 className="section-title">Our outcomes</h2>
+          <h2 className="section-title">Our Outcomes</h2>
           <div className="placements-grid">
             {placements.map((placement, index) => (
               <div key={index} className="placement-card">

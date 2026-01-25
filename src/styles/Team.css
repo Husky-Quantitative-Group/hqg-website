@@ -1,6 +1,7 @@
 .team {
-  padding: 3rem 20px;
-  min-height: calc(100vh - 70px - 300px);
+  padding: 6rem 20px;
+  min-height: calc(100vh - 70px - 280px);
+  background-color: var(--color-bg);
 }
 
 .team .container > h1 {
@@ -16,20 +17,20 @@
 .team-section h2 {
   text-align: center;
   margin-bottom: 2.5rem;
-  color: #002868;
+  color: var(--color-text);
   position: relative;
   padding-bottom: 1rem;
 }
 
 .team-section h2::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
-  height: 3px;
-  background-color: #002868;
+  height: 2px;
+  background-color: var(--color-border);
   border-radius: 2px;
 }
 
@@ -40,43 +41,46 @@
 }
 
 .team-card {
-  background: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .team-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0, 40, 104, 0.15);
-  border-color: #002868;
+  transform: translateY(-6px);
+  background: var(--color-surface-elevated);
+  border-color: rgba(255, 255, 255, 0.24);
 }
 
 .team-avatar {
   width: 120px;
   height: 120px;
-  background: linear-gradient(135deg, #002868, #003d99);
+  background: linear-gradient(135deg, #0f0f0f, #1b1b1b);
   border-radius: 50%;
   margin: 0 auto 1.5rem;
+  border: 1px solid var(--color-border);
 }
 
 .team-card h3 {
   margin-bottom: 0.5rem;
-  color: #1a1a1a;
+  color: var(--color-text);
 }
 
 .team-card .role {
-  color: #002868;
+  color: var(--color-muted);
   font-weight: 600;
   margin-bottom: 1rem;
   font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .team-card .bio {
   font-size: 0.9rem;
-  color: #666;
+  color: var(--color-muted);
   line-height: 1.5;
 }
 
@@ -87,43 +91,44 @@
 }
 
 .alumni-card {
-  background: #f8f9fa;
+  background: var(--color-surface);
   padding: 1.5rem;
-  border-radius: 8px;
-  border-left: 4px solid #002868;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
 }
 
 .alumni-card h3 {
-  color: #1a1a1a;
+  color: var(--color-text);
   margin-bottom: 0.5rem;
 }
 
 .alumni-card p {
-  color: #666;
+  color: var(--color-muted);
   font-size: 0.9rem;
   margin-bottom: 0.3rem;
 }
 
 .alumni-card .current-role {
-  color: #002868;
+  color: var(--color-text);
   font-weight: 600;
 }
 
 .jobs {
   text-align: center;
-  background: linear-gradient(135deg, #f8f9fa, #e8eef7);
+  background: var(--color-bg-alt);
   padding: 3rem 2rem;
-  border-radius: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
 }
 
 .jobs h2 {
-  color: #002868;
+  color: var(--color-text);
 }
 
 .jobs p {
   font-size: 1.05rem;
   margin-bottom: 2rem;
-  color: #555;
+  color: var(--color-muted);
 }
 
 .jobs .cta-button {

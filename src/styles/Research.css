@@ -1,6 +1,7 @@
 .research {
-  padding: 3rem 20px;
-  min-height: calc(100vh - 70px - 300px);
+  padding: 6rem 20px;
+  min-height: calc(100vh - 70px - 280px);
+  background-color: var(--color-bg);
 }
 
 .research .container > h1 {
@@ -12,7 +13,7 @@
 .intro {
   text-align: center;
   font-size: 1.1rem;
-  color: #666;
+  color: var(--color-muted);
   margin-bottom: 3rem;
   max-width: 600px;
   margin-left: auto;
@@ -27,9 +28,9 @@
 }
 
 .article-card {
-  background: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
   padding: 2rem;
   transition: all 0.3s ease;
   display: flex;
@@ -37,9 +38,9 @@
 }
 
 .article-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0, 40, 104, 0.15);
-  border-color: #002868;
+  transform: translateY(-6px);
+  background: var(--color-surface-elevated);
+  border-color: rgba(255, 255, 255, 0.24);
 }
 
 .article-header {
@@ -52,29 +53,31 @@
 }
 
 .category {
-  background: #e8eef7;
-  color: #002868;
+  background: transparent;
+  color: var(--color-muted);
   padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
+  border: 1px solid var(--color-border);
+  letter-spacing: 0.08em;
 }
 
 .date {
-  color: #999;
+  color: var(--color-subtle);
   font-size: 0.85rem;
 }
 
 .article-card h2 {
   font-size: 1.4rem;
   margin: 0.5rem 0 1rem;
-  color: #1a1a1a;
+  color: var(--color-text);
   line-height: 1.4;
 }
 
 .excerpt {
-  color: #666;
+  color: var(--color-muted);
   font-size: 0.95rem;
   line-height: 1.6;
   flex-grow: 1;
@@ -86,19 +89,19 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--color-border);
   gap: 1rem;
 }
 
 .author {
-  color: #888;
+  color: var(--color-subtle);
   font-size: 0.85rem;
 }
 
 .read-more {
   background: none;
   border: none;
-  color: #002868;
+  color: var(--color-text);
   font-weight: 600;
   cursor: pointer;
   padding: 0;
@@ -107,7 +110,7 @@
 }
 
 .read-more:hover {
-  color: #003d99;
+  color: var(--color-accent);
   transform: translateX(4px);
 }
 
