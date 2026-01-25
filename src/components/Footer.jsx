@@ -21,9 +21,9 @@ function Footer() {
         <div className="footer-section">
           <h4>Connect</h4>
           <ul>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="mailto:contact@hqg.com">Email</a></li>
+            <li><a href="https://www.linkedin.com/company/h-q-g/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/Husky-Quantitative-Group" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="mailto:connect@uconnquant.com">Email</a></li>
           </ul>
         </div>
       </div>
