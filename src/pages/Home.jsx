@@ -1,36 +1,106 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Home.css';
+import presentation1 from '../assets/groupshots/presentation1.jpg';
+import presentation2 from '../assets/groupshots/presentation2.jpg';
+import presentation3 from '../assets/groupshots/presentation3.jpg';
+import presentation4 from '../assets/groupshots/presentation4.png';
 
 function Home() {
+  // Placement data
+  const placements = [
+    { company: 'SpaceX', role: 'Software Engineer' },
+    { company: 'Pure Storage', role: 'Software Engineer' },
+    { company: 'Microsoft', role: 'Data Scientist' },
+    { company: 'Wells Fargo', role: 'Quantitative Analyst' },
+    { company: 'Palantir', role: 'Software Engineer' },
+    { company: 'Epic Systems', role: 'Software Engineer' },
+    { company: 'Capital One', role: 'Software Engineer' },
+    { company: 'JPMorgan Chase', role: 'Software Engineer' },
+    { company: 'NASA', role: 'Machine Learning Engineer' },
+    { company: 'Coherent Semiconductors', role: 'AI Engineer' },
+    { company: 'Cornell', role: 'Data Scientist' },
+    { company: 'UCF', role: 'Aerospace PhD' },
+  ];
+
   return (
     <div className="home">
+      {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
           <h1>Husky Quantitative Group</h1>
-          <p>A student-run quantitative investment fund at the University of Connecticut</p>
+          <p className="hero-tagline">UConn's systematic quant fund</p>
         </div>
       </section>
 
-      <section className="about">
+      {/* Mission Section */}
+      <section className="mission-section">
         <div className="container">
-          <h2>What We Do</h2>
-          <p>
-            Husky Quantitative Group is dedicated to developing and deploying quantitative trading strategies,
-            conducting cutting-edge financial research, and building innovative software solutions for the
-            quantitative finance industry.
-          </p>
-          <div className="values">
-            <div className="value-card">
-              <h3>Research</h3>
-              <p>Rigorous analysis of market data and development of data-driven insights</p>
+          <p className="mission-oneliner">
+            Our mission is to build and sustain the largest student-run quant fund in the U.S. by AUM
+            </p>
+          
+          <div className="what-we-do-section">
+            <div className="images-collage">
+              <img src={presentation1} alt="HQG Group Presentation" />
+              <img src={presentation2} alt="HQG Group Presentation" />
+              <img src={presentation3} alt="HQG Group Presentation" />
+              <img src={presentation4} alt="HQG Group Presentation" />
             </div>
-            <div className="value-card">
-              <h3>Innovation</h3>
-              <p>Building tools and strategies that push the boundaries of quantitative finance</p>
+            <div className="what-we-do-content">
+              <h2 className="what-we-do-title">What we do</h2>
+              <ul className="what-we-do-list">
+                <li>Establish UConn as a leader in Quant Finance through experiential learning.</li>
+                <li>Give students the experience, ownership, skills, and connections needed to get top-tier jobs.</li>
+              </ul>
             </div>
-            <div className="value-card">
-              <h3>Education</h3>
-              <p>Mentoring the next generation of quants and financial engineers</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Outcomes Section */}
+      <section className="outcomes-section">
+        <div className="container">
+          <h2 className="section-title">Our outcomes</h2>
+          <div className="placements-grid">
+            {placements.map((placement, index) => (
+              <div key={index} className="placement-card">
+                <div className="placement-company">{placement.company}</div>
+                <div className="placement-role">{placement.role}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Divisions Section */}
+      <section className="divisions-section">
+        <div className="container">
+          <h2 className="section-title">Our Verticals</h2>
+          <div className="divisions-grid">
+            <div className="division-card">
+              <h3>Quant Research</h3>
+              <ul className="division-list">
+                <li>Research and develop mathematical models and algorithms</li>
+                <li>Identify patterns and inefficiencies in financial markets</li>
+                <li>Combine statistical rigor with computational power</li>
+                <li>Generate actionable trading insights</li>
+              </ul>
+              <Link to="/research" className="division-link">
+                Explore Research →
+              </Link>
+            </div>
+            <div className="division-card">
+              <h3>Software Engineering</h3>
+              <ul className="division-list">
+                <li>Build robust trading infrastructure and systems</li>
+                <li>Develop high-performance data processing pipelines</li>
+                <li>Create innovative tools for quantitative analysis</li>
+                <li>Design scalable architecture for real-time trading</li>
+              </ul>
+              <Link to="/products" className="division-link">
+                Explore Software →
+              </Link>
             </div>
           </div>
         </div>

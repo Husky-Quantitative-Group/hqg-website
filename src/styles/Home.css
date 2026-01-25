@@ -1,86 +1,316 @@
 .home {
   width: 100%;
+  background-color: #000000;
+  color: #ffffff;
 }
 
+/* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #002868 0%, #003d99 100%);
-  color: white;
-  padding: 6rem 20px;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-bottom: 4rem;
+  padding: 6rem 20px;
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
 }
 
 .hero-content h1 {
-  color: white;
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  font-weight: 800;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
-.hero-content p {
-  color: #e8e8e8;
-  font-size: 1.3rem;
-  margin: 0;
+.hero-tagline {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: #999999;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
 }
 
-.about {
-  padding: 4rem 20px;
+.hero-subtitle {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 1rem;
 }
 
-.about h2 {
+/* Mission Section */
+.mission-section {
+  padding: 8rem 20px;
+  background-color: #000000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  color: #ffffff;
+  letter-spacing: -0.01em;
 }
 
-.about > .container > p {
+.mission-oneliner {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 400;
   text-align: center;
-  font-size: 1.1rem;
-  margin-bottom: 3rem;
-  max-width: 700px;
+  color: #ffffff;
+  line-height: 1.4;
+  margin-bottom: 6rem;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 20px;
 }
 
-.values {
+.what-we-do-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 
-.value-card {
-  background: #f8f9fa;
-  padding: 2rem;
+.images-collage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  aspect-ratio: 1;
+}
+
+.images-collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 8px;
-  border-left: 4px solid #002868;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
-.value-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 40, 104, 0.15);
+.images-collage img:hover {
+  transform: scale(1.02);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
-.value-card h3 {
-  color: #002868;
+.what-we-do-content {
+  padding: 2rem 0;
+}
+
+.what-we-do-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.what-we-do-list {
+  list-style: none;
+  padding: 0;
+}
+
+.what-we-do-list li {
+  font-size: 1.1rem;
+  line-height: 2;
+  color: #cccccc;
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.what-we-do-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Outcomes Section */
+.outcomes-section {
+  padding: 8rem 20px;
+  background-color: #0a0a0a;
+}
+
+.placements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.placement-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.placement-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.placement-company {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.placement-role {
+  font-size: 0.95rem;
+  color: #999999;
+}
+
+/* Divisions Section */
+.divisions-section {
+  padding: 8rem 20px;
+  background-color: #000000;
+}
+
+.divisions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.division-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.division-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+.division-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.division-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.division-list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #cccccc;
+  padding-left: 1.5rem;
+  position: relative;
   margin-bottom: 1rem;
 }
 
-.value-card p {
-  font-size: 0.95rem;
-  color: #666;
+.division-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.division-link {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.division-link:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+  padding-bottom: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .what-we-do-section {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .images-collage {
+    order: 1;
+  }
+
+  .what-we-do-content {
+    order: 2;
+  }
+
+  .divisions-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 1.1rem;
-  }
-
   .hero {
+    min-height: 60vh;
     padding: 4rem 20px;
+  }
+
+  .mission-section,
+  .outcomes-section,
+  .divisions-section {
+    padding: 4rem 20px;
+  }
+
+  .placements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .division-card {
+    padding: 2rem;
+  }
+
+  .what-we-do-list li {
+    font-size: 1rem;
   }
 }

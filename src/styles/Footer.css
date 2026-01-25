@@ -1,7 +1,8 @@
 .footer {
-  background-color: #1a1a1a;
+  background-color: #000000;
   color: white;
   margin-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-content {
@@ -33,17 +34,17 @@
 }
 
 .footer-section a {
-  color: #bbb;
+  color: #999;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 .footer-section p {
-  color: #aaa;
+  color: #999;
   font-size: 0.95rem;
 }
 
