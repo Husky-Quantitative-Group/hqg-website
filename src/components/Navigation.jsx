@@ -40,6 +40,11 @@ function Navigation() {
               Software
             </Link>
           </li>
+          <li className="nav-item nav-item-cta">
+            <Link to="/apply" className="nav-link nav-cta" onClick={() => setMobileMenuOpen(false)}>
+              Apply
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

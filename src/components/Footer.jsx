@@ -16,6 +16,7 @@ function Footer() {
             <li><a href="/team">Team</a></li>
             <li><a href="/research">Research</a></li>
             <li><a href="/software">Software</a></li>
+            <li><a href="/apply">Apply</a></li>
           </ul>
         </div>
         <div className="footer-section">

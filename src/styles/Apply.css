@@ -1,0 +1,62 @@
+.apply {
+  padding: 6rem 20px;
+  min-height: calc(100vh - 70px - 280px);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.apply .container > h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.apply-status {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}
+
+.apply-section {
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  padding: 2rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.apply-section h2 {
+  margin-bottom: 1rem;
+}
+
+.apply-section p {
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+.apply-section p:last-child {
+  margin-bottom: 0;
+}
+
+.apply-muted {
+  color: var(--color-subtle);
+}
+
+.apply-section a {
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.apply-section a:hover {
+  border-bottom-color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .apply-section {
+    padding: 1.5rem;
+  }
+}

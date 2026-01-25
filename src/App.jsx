@@ -7,6 +7,7 @@ import Team from './pages/Team';
 import Research from './pages/Research';
 import ResearchPost from './pages/ResearchPost';
 import Software from './pages/Software';
+import Apply from './pages/Apply';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/research" element={<Research />} />
             <Route path="/research/:slug" element={<ResearchPost />} />
             <Route path="/software" element={<Software />} />
+            <Route path="/apply" element={<Apply />} />
           </Routes>
         </main>
         <Footer />
