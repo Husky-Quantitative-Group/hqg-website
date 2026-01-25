@@ -98,7 +98,7 @@ function Home() {
                 <li>Ship data pipelines, backtesting infra, and tooling to increase research velocity</li>
                 <li>Learn engineering practices used by top dev teams</li>
               </ul>
-              <Link to="/products" className="division-link">
+              <Link to="/software" className="division-link">
                 Explore Software →
               </Link>
             </div>

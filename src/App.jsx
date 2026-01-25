@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Team from './pages/Team';
 import Research from './pages/Research';
 import ResearchPost from './pages/ResearchPost';
-import Products from './pages/Products';
+import Software from './pages/Software';
 import './App.css';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
             <Route path="/team" element={<Team />} />
             <Route path="/research" element={<Research />} />
             <Route path="/research/:slug" element={<ResearchPost />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/software" element={<Software />} />
           </Routes>
         </main>
         <Footer />

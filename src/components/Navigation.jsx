@@ -36,8 +36,8 @@ function Navigation() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/products" className="nav-link" onClick={() => setMobileMenuOpen(false)}>
-              Products
+            <Link to="/software" className="nav-link" onClick={() => setMobileMenuOpen(false)}>
+              Software
             </Link>
           </li>
         </ul>
