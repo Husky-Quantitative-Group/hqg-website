@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Team from './pages/Team';
 import Research from './pages/Research';
+import ResearchPost from './pages/ResearchPost';
 import Products from './pages/Products';
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/team" element={<Team />} />
             <Route path="/research" element={<Research />} />
+            <Route path="/research/:slug" element={<ResearchPost />} />
             <Route path="/products" element={<Products />} />
           </Routes>
         </main>

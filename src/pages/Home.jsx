@@ -30,7 +30,7 @@ function Home() {
       <section className="hero">
         <div className="hero-content">
           <h1>Husky Quantitative Group</h1>
-          <p className="hero-tagline">UConn's systematic quant fund</p>
+          <p className="hero-tagline">The systematic fund at UConn</p>
         </div>
       </section>
 
@@ -38,7 +38,7 @@ function Home() {
       <section className="mission-section">
         <div className="container">
           <p className="mission-oneliner">
-            Becoming the largest student-run systematic fund in the U.S. by AUM
+            We're building the largest student-run systematic fund in the U.S.
             </p>
           
           <div className="what-we-do-section">
@@ -52,8 +52,8 @@ function Home() {
               {/* TODO: consider making this more like MIG; "who we are" + paragraph form -- community focused */}
               <h2 className="what-we-do-title">What We Do</h2>
               <ul className="what-we-do-list">
-                <li>Give students the experience, ownership, skills, and connections needed to get top-tier jobs.</li>
-                <li>Build a community of the most amibitous students at UConn so we can inspire each other.</li>
+                <li>We train ambitious students in quantitative research and engineering through impactful projects, mentorship, and continuous collaboration.</li>
+                <li>You'll ship novel research, build large-scale software, and join a community that's competitive, supportive, and serious about growth.</li>
               </ul>
             </div>
           </div>
@@ -84,9 +84,8 @@ function Home() {
               <h3>Quant Research</h3>
               <ul className="division-list">
                 <li>Research and develop mathematical models and algorithms</li>
-                <li>Identify patterns and inefficiencies in financial markets</li>
-                <li>Combine statistical rigor with computational power</li>
-                <li>Generate actionable trading insights</li>
+                <li>Work with real datasets, backtests, and risk constraints</li>
+                <li>Learn how to validate signals and communicate results</li>
               </ul>
               <Link to="/research" className="division-link">
                 Explore Research →
@@ -95,10 +94,9 @@ function Home() {
             <div className="division-card">
               <h3>Software Engineering</h3>
               <ul className="division-list">
-                <li>Build robust trading infrastructure and systems</li>
-                <li>Develop high-performance data processing pipelines</li>
-                <li>Create innovative tools for quantitative analysis</li>
-                <li>Design scalable architecture for real-time trading</li>
+                <li>Build robust, sustainable trading infrastructure and systems</li>
+                <li>Ship data pipelines, backtesting infra, and tooling to increase research velocity</li>
+                <li>Learn engineering practices used by top dev teams</li>
               </ul>
               <Link to="/products" className="division-link">
                 Explore Software →

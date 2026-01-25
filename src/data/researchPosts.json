@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Posts Coming Soon!",
+    "excerpt": "We're excited to begin this blog covering the ideas we find interesting.",
+    "date": "Jan 25, 2026",
+    "category": "Announcement",
+    "author": "HQG Research Team",
+    "slug": "coming-soon",
+    "content": [
+      "Looking forward to establishing this biweekly research blog!"
+    ]
+  }
+]
