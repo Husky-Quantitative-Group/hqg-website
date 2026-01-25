@@ -13,7 +13,31 @@ function Research() {
           We research, validate, and deploy sophisticated trading algorithms.
         </p>
 
-        <section className="research-block">
+        
+
+        <section className="partner-section">
+          <div className="partner-header">
+            <div>
+              <h2>HQG x Carbon Arc</h2>
+              <p className="partner-subtitle">
+                A collaboration that strengthens our alternative data pipeline and research throughput.
+              </p>
+            </div>
+            <img
+              className="partner-logo"
+              src={carbonArcLogo}
+              alt="Carbon Arc"
+            />
+          </div>
+          <p>
+            We partner with Carbon Arc to access alternative datasets, including credit card activity, foot traffic, TikTok Shop metrics, and much more. This improves our ability to measure real-world behavior and validate signals with greater precision.
+          </p>
+          <a className="partner-cta" href="mailto:connect@uconnquant.com">
+            Partner with HQG
+          </a>
+        </section>
+
+      <section className="research-block">
           <h2>Our Philosophy</h2>
           <h3>What We Build</h3>
           <p>
@@ -37,28 +61,6 @@ function Research() {
             and portfolio construction. Our onboarding and mentorship make the breadth approachable
             from day one.
           </p>
-        </section>
-
-        <section className="partner-section">
-          <div className="partner-header">
-            <div>
-              <h2>HQG x Carbon Arc</h2>
-              <p className="partner-subtitle">
-                A collaboration that strengthens our alternative data pipeline and research throughput.
-              </p>
-            </div>
-            <img
-              className="partner-logo"
-              src={carbonArcLogo}
-              alt="Carbon Arc"
-            />
-          </div>
-          <p>
-            We partner with Carbon Arc to access alternative datasets, including credit card activity, foot traffic, TikTok Shop metrics, and much more. This improves our ability to measure real-world behavior and validate signals with greater precision.
-          </p>
-          <a className="partner-cta" href="mailto:connect@uconnquant.com">
-            Partner with HQG
-          </a>
         </section>
 
       {/* uncomment when we have motion*/}
