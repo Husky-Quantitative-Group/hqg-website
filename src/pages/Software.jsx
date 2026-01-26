@@ -17,7 +17,7 @@ function Software() {
       ],
       deployment: 'Container deployed on UConn SoB servers',
       repo: 'https://github.com/Husky-Quantitative-Group/hqg-backtester',
-      status: 'Active'
+      status: 'Beta'
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ function Software() {
       ],
       deployment: 'Container deployed on UConn SoB servers',
       repo: 'https://github.com/Husky-Quantitative-Group/hqg-engine',
-      status: 'Active'
+      status: 'Beta'
     },
     {
       id: 3,
@@ -49,7 +49,7 @@ function Software() {
       ],
       deployment: 'We plan on making this dashboard + services available to UConn students!',
       repo: 'https://github.com/Husky-Quantitative-Group/hqg-dashboard',
-      status: 'Active'
+      status: 'Beta'
     },
   ];
 
