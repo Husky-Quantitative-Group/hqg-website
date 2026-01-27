@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting…</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        var base = '/menumatch-labeler';
+        var path =
+          window.location.pathname +
+          window.location.search +
+          window.location.hash;
+        if (path.startsWith(base)) {
+          path = path.slice(base.length) || '/';
+        }
+        var redirectUrl =
+          base +
+          '/?redirect=' +
+          encodeURIComponent(path.startsWith('/') ? path : '/' + path);
+        window.location.replace(redirectUrl);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Hi, Redirecting…</p>
+  </body>
+</html>
