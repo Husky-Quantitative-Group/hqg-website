@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -14,6 +14,7 @@ function App() {
   return (
     <Router basename={process.env.NODE_ENV === 'production' ? '/' : '/'}>
       <div className="App">
+        <RedirectHandler />
         <ScrollToTop />
         <Navigation />
         <main className="main-content">
@@ -30,6 +31,23 @@ function App() {
       </div>
     </Router>
   );
+}
+
+function RedirectHandler() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const redirect = sessionStorage.getItem('redirect');
+    console.log('Checking for redirect:', redirect);
+    
+    if (redirect) {
+      console.log('Redirecting to:', redirect);
+      sessionStorage.removeItem('redirect');
+      navigate(redirect, { replace: true });
+    }
+  }, [navigate]);
+
+  return null;
 }
 
 function ScrollToTop() {
