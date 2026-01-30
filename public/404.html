@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
       /* Store path and redirect to index.html */
-      console.log('in the 404')
       sessionStorage.setItem('redirect', location.pathname + location.search + location.hash);
       location.replace('/');
     </script>
