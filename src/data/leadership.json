@@ -3,24 +3,28 @@
     "name": "Shium Mashud",
     "role": "Portfolio Manager",
     "headshot": "shium-mashud.jpg",
-    "linkedin": "https://www.linkedin.com/in/shium/"
+    "linkedin": "https://www.linkedin.com/in/shium/",
+    "github": "https://github.com/shiumash"
   },
   {
     "name": "Ethan Carty",
     "role": "Quant Research Lead",
     "headshot": "ethan-carty.jpg",
-    "linkedin": "https://www.linkedin.com/in/ethan-carty/"
+    "linkedin": "https://www.linkedin.com/in/ethan-carty/",
+    "github": "https://github.com/EthanXC"
   },
   {
     "name": "Josef Karpinski",
     "role": "Engineering Lead",
     "headshot": "josef-karpinski.png",
-    "linkedin": "https://www.linkedin.com/in/josefkarpinski/"
+    "linkedin": "https://www.linkedin.com/in/josefkarpinski/",
+    "github": "https://github.com/josef-karpinski"
   },
   {
     "name": "Brendan Barnett",
     "role": "Founder, Advisor",
     "headshot": "brendan-barnett.jpg",
-    "linkedin": "https://www.linkedin.com/in/brendanabarnett/"
+    "linkedin": "https://www.linkedin.com/in/brendanabarnett/",
+    "github": "https://github.com/brendanabarnett"
   }
 ]
