@@ -3,54 +3,63 @@
     "name": "Albert Mundadan",
     "role": "Developer",
     "headshot": "albert-mundadan.png",
-    "linkedin": "https://www.linkedin.com/in/albert-mundadan/"
+    "linkedin": "https://www.linkedin.com/in/albert-mundadan/",
+    "github": "https://github.com/AlbertMundadan"
   },
   {
     "name": "Emmet Spaeth",
     "role": "Researcher",
     "headshot": "emmet-spaeth.png",
-    "linkedin": "https://www.linkedin.com/in/emmet-spaeth-136165309/"
+    "linkedin": "https://www.linkedin.com/in/emmet-spaeth-136165309/",
+    "github": "https://github.com/mineable3"
   },
   {
     "name": "Ethan Thomas",
     "role": "Developer",
     "headshot": "ethan-thomas.png",
-    "linkedin": "https://www.linkedin.com/in/ethanthomas0/"
+    "linkedin": "https://www.linkedin.com/in/ethanthomas0/",
+    "github": "https://github.com/ethant0123"
   },
   {
     "name": "Grace McPadden",
     "role": "Researcher",
     "headshot": "grace-mcpadden.png",
-    "linkedin": "https://www.linkedin.com/in/grace-mcpadden/"
+    "linkedin": "https://www.linkedin.com/in/grace-mcpadden/",
+    "github": "https://github.com/GraceMcPadden2"
   },
   {
     "name": "Katrina Melnik",
     "role": "Researcher",
     "headshot": "katrina-melnik.jpg",
-    "linkedin": "https://www.linkedin.com/in/katrina-melnik-b4b559241/"
+    "linkedin": "https://www.linkedin.com/in/katrina-melnik-b4b559241/",
+    "github": "https://github.com/katmlnk"
   },
   {
     "name": "Micah Banschick",
     "role": "Researcher",
     "headshot": "micah-banschick.png",
-    "linkedin": "https://www.linkedin.com/in/micah-banschick/"
+    "linkedin": "https://www.linkedin.com/in/micah-banschick/",
+    "github": "https://github.com/micahabanschick"
   },
   {
     "name": "Parth Danve",
     "role": "Researcher",
     "headshot": "parth-danve.jpg",
-    "linkedin": "https://www.linkedin.com/in/parthdanve39/"
+    "linkedin": "https://www.linkedin.com/in/parthdanve39/",
+    "github": "https://github.com/pdd23001"
   },
   {
     "name": "Shawn Spitzel",
     "role": "Developer",
     "headshot": "shawn-spitzel.jpg",
-    "linkedin": "https://www.linkedin.com/in/shawn-spitzel-b16b47298/"
+    "linkedin": "https://www.linkedin.com/in/shawn-spitzel-b16b47298/",
+    "github": "https://github.com/shawnspitzel"
   },
   {
     "name": "Soonwoo Kwon",
     "role": "Developer",
     "headshot": "soonwoo-kwon.png",
-    "linkedin": "https://www.linkedin.com/in/soonwook/"
+    "linkedin": "https://www.linkedin.com/in/soonwook/",
+    "github": "https://github.com/swoonyk"
   }
 ]
