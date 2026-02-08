@@ -53,7 +53,7 @@ function Home() {
               <h2 className="what-we-do-title">What We Do</h2>
               <ul className="what-we-do-list">
                 <li>We train ambitious students in quantitative research and engineering through impactful projects, mentorship, and continuous collaboration.</li>
-                <li>You'll ship novel research, build large-scale software, and join a community that's competitive, supportive, and serious about growth.</li>
+                <li>Students ship novel research, build large-scale software, and join a community that's competitive, supportive, and serious about growth.</li>
               </ul>
             </div>
           </div>
