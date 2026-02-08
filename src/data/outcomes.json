@@ -48,10 +48,11 @@
       "location": "Madison, WI",
       "x": 64.5,
       "y": 33,
+      "tooltipDirection": "up",
       "placements": [
         {
           "company": "Epic Systems",
-          "role": "Software Engineer"
+          "role": "Software Engineering"
         }
       ]
     },
@@ -59,21 +60,95 @@
       "location": "Starbase, TX",
       "x": 52,
       "y": 92,
+      "tooltipDirection": "up",
       "placements": [
         {
           "company": "SpaceX",
-          "role": "Software Engineer"
+          "role": "Software Engineering"
         }
       ]
     },
     {
-      "location": "Hartford, CT",
+      "location": "Connecticut",
       "x": 91.5,
       "y": 31.5,
+      "tooltipDirection": "left",
       "placements": [
         {
           "company": "Pratt & Whitney",
-          "role": "Software Engineer Intern"
+          "role": "Software Engineering"
+        },
+        {
+          "company": "The Hartford",
+          "role": "Data Engineering"
+        },
+        {
+          "company": "Synchrony",
+          "role": "Data Engineering"
+        }
+      ]
+    },
+    {
+      "location": "New York, NY",
+      "x": 89.8,
+      "y": 34.5,
+      "tooltipDirection": "up",
+      "placements": [
+        {
+          "company": "JPMorgan Chase",
+          "role": "Software Engineering"
+        },
+        {
+          "company": "IBM",
+          "role": "Quantum Software Engineering"
+        }
+      ]
+    },
+    {
+      "location": "San Francisco, CA",
+      "x": 11,
+      "y": 42.5,
+      "tooltipDirection": "up",
+      "placements": [
+        {
+          "company": "Pure Storage",
+          "role": "Software Engineering"
+        }
+      ]
+    },
+    {
+      "location": "Orlando, FL",
+      "x": 82,
+      "y": 81,
+      "tooltipDirection": "up",
+      "placements": [
+        {
+          "company": "University of Central Florida",
+          "role": "Aerospace Engineering PhD"
+        }
+      ]
+    },
+    {
+      "location": "Washington, DC",
+      "x": 85.5,
+      "y": 43.5,
+      "tooltipDirection": "up",
+      "placements": [
+        {
+          "company": "Capital One",
+          "role": "Software Engineering"
+        }
+      ]
+    },
+    {
+      "location": "Seattle, WA",
+      "x": 16.5,
+      "y": 10,
+      "tooltipDirection": "down",
+      "placements": [
+        {
+          "company": "Microsoft",
+          "role": "Software Engineering"
         }
       ]
     }

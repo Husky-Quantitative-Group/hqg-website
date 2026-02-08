@@ -218,6 +218,7 @@
   --logo-tile-width: 150px;
   --logo-image-width: 120px;
   --logo-image-height: 40px;
+  --marquee-gap: 1.6rem;
 }
 
 .outcomes-carousel::before,
@@ -243,7 +244,7 @@
 
 .marquee-track {
   display: inline-flex;
-  gap: 1.6rem;
+  gap: 0;
   align-items: stretch;
   width: max-content;
   animation: marquee-left 42s linear infinite;
@@ -254,6 +255,7 @@
   flex-direction: column;
   justify-content: flex-start;
   height: calc(var(--logo-tile-height) * 2 + var(--logo-row-gap));
+  margin-right: var(--marquee-gap);
 }
 
 .logo-column--bottom {
@@ -514,7 +516,6 @@
 
 .pin-tooltip {
   position: relative;
-  transform: translateY(8px);
   background: rgba(10, 10, 10, 0.96);
   border: 1px solid rgba(130, 212, 255, 0.4);
   border-radius: 12px;
@@ -529,25 +530,86 @@
 .pin-tooltip::after {
   content: "";
   position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 7px 7px 0 7px;
   border-style: solid;
-  border-color: rgba(10, 10, 10, 0.96) transparent transparent transparent;
 }
 
 .pin-tooltip-wrapper {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: flex-end;
   justify-content: center;
 }
 
 .pin-fo {
   overflow: visible;
   pointer-events: none;
+}
+
+/* Map tooltip directions */
+.map-pin[data-tooltip="up"] .pin-tooltip {
+  transform: translateY(8px);
+}
+
+.map-pin[data-tooltip="up"] .pin-tooltip::after {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 7px 7px 0 7px;
+  border-color: rgba(10, 10, 10, 0.96) transparent transparent transparent;
+}
+
+.map-pin[data-tooltip="up"] .pin-tooltip-wrapper {
+  align-items: flex-end;
+}
+
+.map-pin[data-tooltip="down"] .pin-tooltip {
+  transform: translateY(-8px);
+}
+
+.map-pin[data-tooltip="down"] .pin-tooltip::after {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 7px 7px 7px;
+  border-color: transparent transparent rgba(10, 10, 10, 0.96) transparent;
+}
+
+.map-pin[data-tooltip="down"] .pin-tooltip-wrapper {
+  align-items: flex-start;
+}
+
+.map-pin[data-tooltip="left"] .pin-tooltip {
+  transform: translateX(8px);
+}
+
+.map-pin[data-tooltip="left"] .pin-tooltip::after {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 7px 0 7px 7px;
+  border-color: transparent transparent transparent rgba(10, 10, 10, 0.96);
+}
+
+.map-pin[data-tooltip="left"] .pin-tooltip-wrapper {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.map-pin[data-tooltip="right"] .pin-tooltip {
+  transform: translateX(-8px);
+}
+
+.map-pin[data-tooltip="right"] .pin-tooltip::after {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 7px 7px 7px 0;
+  border-color: transparent rgba(10, 10, 10, 0.96) transparent transparent;
+}
+
+.map-pin[data-tooltip="right"] .pin-tooltip-wrapper {
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .map-pin:focus-visible .pin-core {
@@ -585,7 +647,7 @@
 .map-pin:hover .pin-tooltip,
 .map-pin:focus-visible .pin-tooltip {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0, 0);
 }
 
 @keyframes marquee-left {
@@ -745,6 +807,7 @@
     --logo-tile-width: 120px;
     --logo-image-width: 96px;
     --logo-image-height: 32px;
+    --marquee-gap: 1.2rem;
   }
 
   .outcomes-surface {
