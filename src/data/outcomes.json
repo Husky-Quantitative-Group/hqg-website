@@ -1,0 +1,81 @@
+{
+  "logos": [
+    {
+      "company": "SpaceX",
+      "role": "Software Engineer",
+      "logo": "spacex.svg",
+      "href": ""
+    },
+    {
+      "company": "Pure Storage",
+      "role": "Software Engineer",
+      "logo": "pure-storage.svg",
+      "href": ""
+    },
+    {
+      "company": "Microsoft",
+      "role": "Data Scientist",
+      "logo": "microsoft.svg",
+      "href": ""
+    },
+    {
+      "company": "Epic Systems",
+      "role": "Software Engineer",
+      "logo": "epic-systems.svg",
+      "href": ""
+    },
+    {
+      "company": "Capital One",
+      "role": "Software Engineer",
+      "logo": "capital-one.svg",
+      "href": ""
+    },
+    {
+      "company": "JPMorgan Chase",
+      "role": "Software Engineer",
+      "logo": "jpmorgan-chase.svg",
+      "href": ""
+    },
+    {
+      "company": "IBM",
+      "role": "Quantum Software Engineer",
+      "logo": "ibm.svg",
+      "href": ""
+    }
+  ],
+  "mapPlacements": [
+    {
+      "location": "Madison, WI",
+      "x": 64.5,
+      "y": 33,
+      "placements": [
+        {
+          "company": "Epic Systems",
+          "role": "Software Engineer"
+        }
+      ]
+    },
+    {
+      "location": "Starbase, TX",
+      "x": 52,
+      "y": 92,
+      "placements": [
+        {
+          "company": "SpaceX",
+          "role": "Software Engineer"
+        }
+      ]
+    },
+    {
+      "location": "Hartford, CT",
+      "x": 91.5,
+      "y": 31.5,
+      "placements": [
+        {
+          "company": "Pratt & Whitney",
+          "role": "Software Engineer Intern"
+        }
+      ]
+    }
+  ]
+}
