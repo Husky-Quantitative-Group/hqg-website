@@ -177,6 +177,28 @@
   margin-bottom: 3.5rem;
 }
 
+.outcomes-surface {
+  --surface-bg: rgba(8, 8, 8, 0.92);
+  position: relative;
+  border-radius: 28px;
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(6, 6, 6, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+
+.outcomes-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(130, 212, 255, 0.12), transparent 48%),
+    radial-gradient(circle at 80% 78%, rgba(255, 255, 255, 0.07), transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.04), transparent 55%);
+  opacity: 0.75;
+  pointer-events: none;
+}
+
 .section-subtitle {
   font-size: clamp(1rem, 2.2vw, 1.25rem);
   color: var(--color-muted);
@@ -187,7 +209,7 @@
 .outcomes-carousel {
   position: relative;
   z-index: 1;
-  margin-bottom: 4.5rem;
+  margin-bottom: 3.5rem;
   overflow-x: hidden;
   overflow-y: visible;
   padding: 0.5rem 0;
@@ -211,12 +233,12 @@
 
 .outcomes-carousel::before {
   left: 0;
-  background: linear-gradient(90deg, var(--color-bg-alt), transparent);
+  background: linear-gradient(90deg, var(--surface-bg), transparent);
 }
 
 .outcomes-carousel::after {
   right: 0;
-  background: linear-gradient(270deg, var(--color-bg-alt), transparent);
+  background: linear-gradient(270deg, var(--surface-bg), transparent);
 }
 
 .marquee-track {
@@ -344,27 +366,20 @@
 .outcomes-map {
   position: relative;
   z-index: 1;
+  margin-top: 0.5rem;
 }
 
 .map-card {
   --map-accent: #82d4ff;
-  border-radius: 24px;
-  border: 1px solid var(--color-border);
-  background: linear-gradient(135deg, rgba(18, 18, 18, 0.9), rgba(8, 8, 8, 0.9));
-  padding: 2.5rem;
+  border-radius: 22px;
+  border: none;
+  background: transparent;
+  padding: 0;
   position: relative;
-  overflow: hidden;
 }
 
 .map-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(130, 212, 255, 0.15), transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08), transparent 45%);
-  opacity: 0.7;
-  pointer-events: none;
+  content: none;
 }
 
 .map-header {
@@ -405,7 +420,7 @@
 
 .map-canvas {
   position: relative;
-  margin-top: 2rem;
+  margin-top: 0;
   border-radius: 20px;
   background:
     radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05), transparent 45%),
@@ -730,6 +745,10 @@
     --logo-tile-width: 120px;
     --logo-image-width: 96px;
     --logo-image-height: 32px;
+  }
+
+  .outcomes-surface {
+    padding: 2rem 1.5rem;
   }
 
   .outcomes-carousel::before,

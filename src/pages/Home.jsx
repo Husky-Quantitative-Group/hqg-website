@@ -119,83 +119,74 @@ function Home() {
             </p>
           </div>
 
-          <div className="outcomes-carousel" aria-label="Placement logos">
-            <div className="marquee-track">
-              {marqueeLogos.map((placement, index) => {
-                return (
-                  <div
-                    key={`col-${placement.company}-${index}`}
-                    className={`logo-column${index % 2 === 1 ? ' logo-column--bottom' : ''}`}
-                  >
-                    <LogoCard placement={placement} />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="outcomes-map">
-            <div className="map-card">
-              <div className="map-header">
-                <div>
-                  <h3 className="map-title">Placement Map</h3>
-                  <p className="map-subtitle">Initial pins — more locations soon.</p>
-                </div>
-                <div className="map-legend">
-                  <span className="map-legend-dot" />
-                  <span>Company placements</span>
-                </div>
-              </div>
-
-              <div className="map-canvas">
-                <svg
-                  className="us-map"
-                  viewBox="0 0 835.44 523.48"
-                  preserveAspectRatio="xMidYMid meet"
-                  role="group"
-                  aria-label="Map of U.S. placements"
-                >
-                  <image
-                    className="us-map-image"
-                    href={usMap}
-                    x="0"
-                    y="0"
-                    width="835.44"
-                    height="523.48"
-                    aria-hidden="true"
-                  />
-
-                  {mapPlacements.map((placement, index) => {
-                    const pinX = (placement.x / 100) * mapViewBox.width;
-                    const pinY = (placement.y / 100) * mapViewBox.height;
-                    return (
-                    <g
-                      key={`${placement.location}-${index}`}
-                      className="map-pin"
-                      transform={`translate(${pinX} ${pinY})`}
-                      role="button"
-                      tabIndex="0"
-                      aria-label={`${placement.location} placements`}
+          <div className="outcomes-surface">
+            <div className="outcomes-carousel" aria-label="Placement logos">
+              <div className="marquee-track">
+                {marqueeLogos.map((placement, index) => {
+                  return (
+                    <div
+                      key={`col-${placement.company}-${index}`}
+                      className={`logo-column${index % 2 === 1 ? ' logo-column--bottom' : ''}`}
                     >
-                      <circle className="pin-pulse" cx="0" cy="0" r="14" />
-                      <circle className="pin-core" cx="0" cy="0" r="6" />
-                      <foreignObject x="-120" y="-140" width="240" height="130" className="pin-fo">
-                        <div className="pin-tooltip-wrapper" xmlns="http://www.w3.org/1999/xhtml">
-                          <div className="pin-tooltip">
-                            <span className="pin-location">{placement.location}</span>
-                            {(placement.placements ?? []).map((entry, entryIndex) => (
-                              <span key={`${entry.company}-${entryIndex}`} className="pin-entry">
-                                <span className="pin-company">{entry.company}</span>
-                                <span className="pin-role">{entry.role}</span>
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </foreignObject>
-                    </g>
+                      <LogoCard placement={placement} />
+                    </div>
                   );
-                  })}
-                </svg>
+                })}
+              </div>
+            </div>
+
+            <div className="outcomes-map">
+              <div className="map-card">
+                <div className="map-canvas">
+                  <svg
+                    className="us-map"
+                    viewBox="0 0 835.44 523.48"
+                    preserveAspectRatio="xMidYMid meet"
+                    role="group"
+                    aria-label="Map of U.S. placements"
+                  >
+                    <image
+                      className="us-map-image"
+                      href={usMap}
+                      x="0"
+                      y="0"
+                      width="835.44"
+                      height="523.48"
+                      aria-hidden="true"
+                    />
+
+                    {mapPlacements.map((placement, index) => {
+                      const pinX = (placement.x / 100) * mapViewBox.width;
+                      const pinY = (placement.y / 100) * mapViewBox.height;
+                      return (
+                      <g
+                        key={`${placement.location}-${index}`}
+                        className="map-pin"
+                        transform={`translate(${pinX} ${pinY})`}
+                        role="button"
+                        tabIndex="0"
+                        aria-label={`${placement.location} placements`}
+                      >
+                        <circle className="pin-pulse" cx="0" cy="0" r="14" />
+                        <circle className="pin-core" cx="0" cy="0" r="6" />
+                        <foreignObject x="-120" y="-140" width="240" height="130" className="pin-fo">
+                          <div className="pin-tooltip-wrapper" xmlns="http://www.w3.org/1999/xhtml">
+                            <div className="pin-tooltip">
+                              <span className="pin-location">{placement.location}</span>
+                              {(placement.placements ?? []).map((entry, entryIndex) => (
+                                <span key={`${entry.company}-${entryIndex}`} className="pin-entry">
+                                  <span className="pin-company">{entry.company}</span>
+                                  <span className="pin-role">{entry.role}</span>
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        </foreignObject>
+                      </g>
+                    );
+                    })}
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
