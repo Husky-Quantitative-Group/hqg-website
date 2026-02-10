@@ -5,24 +5,77 @@ import presentation1 from '../assets/groupshots/presentation1.jpg';
 import presentation2 from '../assets/groupshots/presentation2.jpg';
 import presentation3 from '../assets/groupshots/presentation3.jpg';
 import presentation4 from '../assets/groupshots/presentation4.png';
+import usMap from '../assets/misc/us.svg';
+import outcomesData from '../data/outcomes.json';
+
+const logoAssets = {
+  ...import.meta.glob('../assets/logos/*', { eager: true, import: 'default' }),
+  ...import.meta.glob('../assets/logos/companies/*', { eager: true, import: 'default' }),
+};
+
+const logoAssetMap = Object.entries(logoAssets).reduce((acc, [path, src]) => {
+  const filename = path.split('/').pop();
+  if (filename) {
+    acc[filename] = src;
+  }
+  return acc;
+}, {});
+
+function LogoCard({ placement }) {
+  const [imageError, setImageError] = React.useState(false);
+  const showLogo = Boolean(placement.logoSrc) && !imageError;
+  const content = (
+    <>
+      {showLogo ? (
+        <img
+          className="logo-image"
+          src={placement.logoSrc}
+          alt={`${placement.company} logo`}
+          loading="lazy"
+          onError={() => setImageError(true)}
+        />
+      ) : (
+        <span className="logo-placeholder" aria-hidden="true" />
+      )}
+      <span className="logo-tooltip">{placement.company}</span>
+    </>
+  );
+
+  if (placement.href) {
+    return (
+      <a
+        className="logo-card"
+        href={placement.href}
+        aria-label={placement.company}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <div className="logo-card" tabIndex="0" aria-label={placement.company}>
+      {content}
+    </div>
+  );
+}
 
 // TODO: make better; + community
 function Home() {
-  // TODO: add logos
-  const placements = [
-    { company: 'SpaceX', role: 'Software Engineer' },
-    { company: 'Pure Storage', role: 'Software Engineer' },
-    { company: 'Microsoft', role: 'Data Scientist' },
-    { company: 'Wells Fargo', role: 'Quantitative Analyst' },
-    { company: 'Palantir', role: 'Software Engineer' },
-    { company: 'Epic Systems', role: 'Software Engineer' },
-    { company: 'Capital One', role: 'Software Engineer' },
-    { company: 'JPMorgan Chase', role: 'Software Engineer' },
-    { company: 'IBM', role: 'Quantum Software Engineer' },
-    { company: 'Coherent Semiconductors', role: 'AI Engineer' },
-    { company: 'Cornell', role: 'Reinforcement Learning Researcher' },
-    { company: 'UCF', role: 'Aerospace PhD' },
-  ];
+  const logoPlacements = outcomesData.logos ?? [];
+  const resolvedLogoPlacements = logoPlacements.map((placement) => ({
+    ...placement,
+    logoSrc: placement.logo ? logoAssetMap[placement.logo] : '',
+  }));
+  const baseColumns =
+    resolvedLogoPlacements.length % 2 === 1
+      ? [...resolvedLogoPlacements, ...resolvedLogoPlacements]
+      : resolvedLogoPlacements;
+  const mapPlacements = outcomesData.mapPlacements ?? [];
+  const mapViewBox = { width: 835.44, height: 523.48 };
+  const marqueeLogos = [...baseColumns, ...baseColumns];
 
   return (
     <div className="home">
@@ -63,14 +116,106 @@ function Home() {
       {/* Outcomes Section */}
       <section className="outcomes-section">
         <div className="container">
-          <h2 className="section-title">Our Outcomes</h2>
-          <div className="placements-grid">
-            {placements.map((placement, index) => (
-              <div key={index} className="placement-card">
-                <div className="placement-company">{placement.company}</div>
-                <div className="placement-role">{placement.role}</div>
+          <div className="outcomes-header">
+            <h2 className="section-title">Our Outcomes</h2>
+            <p className="section-subtitle">
+              Where HQG members land after shipping real research and engineering.
+            </p>
+          </div>
+
+          <div className="outcomes-surface">
+            <div className="outcomes-carousel" aria-label="Placement logos">
+              <div className="marquee-track">
+                {marqueeLogos.map((placement, index) => {
+                  return (
+                    <div
+                      key={`col-${placement.company}-${index}`}
+                      className={`logo-column${index % 2 === 1 ? ' logo-column--bottom' : ''}`}
+                    >
+                      <LogoCard placement={placement} />
+                    </div>
+                  );
+                })}
               </div>
-            ))}
+            </div>
+
+            <div className="outcomes-map">
+              <div className="map-card">
+                <div className="map-canvas">
+                  <svg
+                    className="us-map"
+                    viewBox="0 0 835.44 523.48"
+                    preserveAspectRatio="xMidYMid meet"
+                    role="group"
+                    aria-label="Map of U.S. placements"
+                  >
+                    <image
+                      className="us-map-image"
+                      href={usMap}
+                      x="0"
+                      y="0"
+                      width="835.44"
+                      height="523.48"
+                      aria-hidden="true"
+                    />
+
+                    {mapPlacements.map((placement, index) => {
+                      const pinX = (placement.x / 100) * mapViewBox.width;
+                      const pinY = (placement.y / 100) * mapViewBox.height;
+                      const tooltipDirection = placement.tooltipDirection || 'up';
+                      const tooltipBox = (() => {
+                        const width = 240;
+                        const height = 130;
+                        const offset = 20;
+                        switch (tooltipDirection) {
+                          case 'down':
+                            return { x: -width / 2, y: offset, width, height };
+                          case 'left':
+                            return { x: -width - offset, y: -height / 2, width, height };
+                          case 'right':
+                            return { x: offset, y: -height / 2, width, height };
+                          default:
+                            return { x: -width / 2, y: -height - offset, width, height };
+                        }
+                      })();
+                      return (
+                      <g
+                        key={`${placement.location}-${index}`}
+                        className="map-pin"
+                        transform={`translate(${pinX} ${pinY})`}
+                        data-tooltip={tooltipDirection}
+                        role="button"
+                        tabIndex="0"
+                        aria-label={`${placement.location} placements`}
+                      >
+                        <circle className="pin-pulse" cx="0" cy="0" r="14" />
+                        <circle className="pin-core" cx="0" cy="0" r="6" />
+                        <foreignObject
+                          x={tooltipBox.x}
+                          y={tooltipBox.y}
+                          width={tooltipBox.width}
+                          height={tooltipBox.height}
+                          className="pin-fo"
+                        >
+                          <div className="pin-tooltip-wrapper" xmlns="http://www.w3.org/1999/xhtml">
+                            <div className="pin-tooltip">
+                              <span className="pin-location">{placement.location}</span>
+                              {(placement.placements ?? []).map((entry, entryIndex) => (
+                                <span key={`${entry.company}-${entryIndex}`} className="pin-entry">
+                                  <span className="pin-company">{entry.company}</span>
+                                  <span className="pin-role">{entry.role}</span>
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        </foreignObject>
+                      </g>
+                    );
+                    })}
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
