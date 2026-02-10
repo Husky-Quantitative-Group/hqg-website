@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig(({ ssrBuild }) => ({
+export default defineConfig(({ isSsrBuild }) => ({
   plugins: [react()],
   base: '/',
   build: {
-    outDir: ssrBuild ? 'dist-ssr' : 'dist',
+    outDir: isSsrBuild ? 'dist-ssr' : 'dist',
   },
 }));
