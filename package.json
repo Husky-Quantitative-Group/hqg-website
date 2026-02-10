@@ -16,6 +16,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:ssr": "vite build --ssr src/entry-server.jsx",
+    "prerender": "node scripts/prerender.js",
+    "build:static": "npm run build && npm run build:ssr && npm run prerender",
     "preview": "vite preview"
   },
   "eslintConfig": {
