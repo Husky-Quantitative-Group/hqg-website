@@ -5,15 +5,11 @@ function Apply() {
   return (
     <div className="apply">
       <div className="container">
-        <a
-          className="apply-hero-button"
-          href="https://forms.office.com/r/tvAc2dJRvz"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Apply
-        </a>
-        <p className="apply-status">Applications for Fall 2026 are open and close Feb 15, 2026.</p>
+        <section className="apply-section">
+          <h1>Apply</h1>
+          <p>Applications for Fall 2026 have closed. Please reach out at{' '}
+          <a href="mailto:connect@uconnquant.com">connect@uconnquant.com</a> with any questions!</p>
+        </section>
 
         <section className="apply-section">
           <h2>What we look for in an applicant</h2>
@@ -50,16 +46,18 @@ function Apply() {
             which we operate and use as a pathway into the fund. It's a great way to learn the basics, get project inspiration/mentorship, and meet our members + other students interested in quant!
           </p>
           <p>
-            Learn more at <a href="https://uconntact.uconn.edu/organization/quant" target="_blank" rel="noreferrer">uconntact.uconn.edu/organization/quant</a>.
+            Learn more at our <a href="https://uconntact.uconn.edu/organization/quant" target="_blank" rel="noreferrer">UConntact page</a>.
           </p>
         </section>
 
+        {/*
         <section className="apply-section">
           <h2>Application</h2>
           <p className="apply-muted">
-            Apply using the form below. Applications close Feb 15, 2026. Reach out at{' '}
+            Apply using the form below. Applications close _____. Reach out at{' '}
             <a href="mailto:connect@uconnquant.com">connect@uconnquant.com</a> with any questions.
           </p>
+          
           <a
             className="apply-button"
             href="https://forms.office.com/r/tvAc2dJRvz"
@@ -69,6 +67,7 @@ function Apply() {
             Apply Here
           </a>
         </section>
+        */}
       </div>
     </div>
   );

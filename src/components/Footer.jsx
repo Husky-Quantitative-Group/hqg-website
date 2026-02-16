@@ -24,7 +24,7 @@ function Footer() {
           <h4>Connect</h4>
           <ul>
             <li><a href="https://github.com/Husky-Quantitative-Group" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/company/h-q-g/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/company/uconnquant/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             <li><a href="https://discord.gg/3KcdBwdyAm" target="_blank" rel="noopener noreferrer">Discord</a></li>
             <li><a href="https://www.instagram.com/huskyquantitativegroup" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             <li><a href="mailto:connect@uconnquant.com">Email</a></li>
