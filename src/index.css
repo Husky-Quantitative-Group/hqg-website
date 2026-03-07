@@ -2,95 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Typography */
+    --font-base: 'DM Sans', system-ui, sans-serif;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-editorial: 'Instrument Serif', Georgia, serif;
+    --font-ui: 'Manrope', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', Consolas, monospace;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* HQG Light Mode */
+    --background: 37 33% 94.5%;       /* #F7F3EB parchment */
+    --foreground: 20 10% 10%;          /* #1C1917 inkwell */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: 45 100% 99%;              /* #FFFEF9 ivory */
+    --card-foreground: 20 10% 10%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --popover: 45 100% 99%;
+    --popover-foreground: 20 10% 10%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: 30 82% 31.4%;          /* #92400E umber */
+    --primary-foreground: 45 100% 99%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 20 6% 90%;           /* chalk-ish */
+    --secondary-foreground: 25 8% 26%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 20 6% 90%;
+    --muted-foreground: 25 5% 64%;    /* stone */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: 176 70% 21%;            /* #115E59 verdigris */
+    --accent-foreground: 45 100% 99%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 20 89% 40%;        /* terracotta */
+    --destructive-foreground: 45 100% 99%;
 
-    --radius: 0.5rem;
+    --border: 20 8% 83%;              /* sepia */
+    --input: 20 8% 83%;
+    --ring: 30 82% 31.4%;
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 0.375rem;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* HQG Semantic */
+    --hqg-parchment: 37 33% 94.5%;
+    --hqg-ivory: 45 100% 99%;
+    --hqg-inkwell: 20 10% 10%;
+    --hqg-graphite: 25 8% 26%;
+    --hqg-umber: 30 82% 31.4%;
+    --hqg-terracotta: 22 89% 40%;
+    --hqg-verdigris: 176 70% 21%;
+    --hqg-patina: 174 83% 31.6%;
+    --hqg-stone: 25 5% 64%;
+    --hqg-chalk: 20 6% 90%;
+    --hqg-sepia: 20 8% 83%;
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 37 33% 94.5%;
+    --sidebar-foreground: 20 10% 10%;
+    --sidebar-primary: 30 82% 31.4%;
+    --sidebar-primary-foreground: 45 100% 99%;
+    --sidebar-accent: 20 6% 90%;
+    --sidebar-accent-foreground: 25 8% 26%;
+    --sidebar-border: 20 8% 83%;
+    --sidebar-ring: 30 82% 31.4%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 60 3% 14.5%;        /* #262624 */
+    --foreground: 40 30% 97%;         /* #FBF9F5 */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 60 3% 18%;               /* #2E2E2C */
+    --card-foreground: 40 30% 97%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 60 3% 18%;
+    --popover-foreground: 40 30% 97%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 209 68% 67%;           /* #74ABE2 */
+    --primary-foreground: 20 10% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 60 3% 21%;           /* #363634 */
+    --secondary-foreground: 40 15% 76%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 60 3% 21%;
+    --muted-foreground: 48 5% 52%;    /* #8A8780 */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 209 68% 67%;
+    --accent-foreground: 20 10% 10%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 16 76% 45%;        /* #CA4B1D */
+    --destructive-foreground: 40 30% 97%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 0 0% 25%;               /* #404040 */
+    --input: 0 0% 25%;
+    --ring: 209 68% 67%;
+
+    --hqg-parchment: 60 3% 14.5%;
+    --hqg-ivory: 60 3% 18%;
+    --hqg-inkwell: 40 30% 97%;
+    --hqg-graphite: 40 15% 76%;
+    --hqg-umber: 209 68% 67%;
+    --hqg-terracotta: 209 100% 41%;
+    --hqg-verdigris: 209 68% 67%;
+    --hqg-patina: 207 68% 78%;
+    --hqg-stone: 48 5% 52%;
+    --hqg-chalk: 60 3% 21%;
+    --hqg-sepia: 0 0% 25%;
+
+    --sidebar-background: 60 3% 14.5%;
+    --sidebar-foreground: 40 30% 97%;
+    --sidebar-primary: 209 68% 67%;
+    --sidebar-primary-foreground: 20 10% 10%;
+    --sidebar-accent: 60 3% 21%;
+    --sidebar-accent-foreground: 40 30% 97%;
+    --sidebar-border: 0 0% 25%;
+    --sidebar-ring: 209 68% 67%;
   }
 }
 
@@ -101,5 +124,31 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-base);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-base);
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-editorial {
+    font-family: var(--font-editorial);
+  }
+  .font-ui {
+    font-family: var(--font-ui);
+  }
+  .font-mono-hqg {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
