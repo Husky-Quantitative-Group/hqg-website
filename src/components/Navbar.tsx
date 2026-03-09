@@ -3,10 +3,11 @@ import { Moon, Sun } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "About Us", href: "#about" },
-  { label: "Team", href: "#team" },
-  { label: "Research", href: "#research" },
-  { label: "Engineering", href: "#engineering" },
+  { label: "About Us", href: "/" },
+  { label: "Team", href: "/team" },
+  { label: "Research", href: "/research" },
+  { label: "Engineering", href: "/engineering" },
+  { label: "Blog", href: "/blog" },
   { label: "GitHub", href: "https://github.com/Husky-Quantitative-Group", external: true },
 ];
 
@@ -35,16 +36,24 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border shadow-sm"
+          ? "bg-background/90 backdrop-blur-md shadow-sm"
           : "bg-transparent"
       }`}
     >
+      {/* Bottom border with fade transition */}
+      <div
+        className={`absolute bottom-0 left-0 right-0 h-px bg-border transition-opacity duration-300 ${
+          scrolled ? "opacity-100" : "opacity-0"
+        }`}
+      />
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
-          <span className="font-display text-2xl font-bold tracking-tight text-foreground">
-            HQG
-          </span>
+        <a href="" className={`flex items-center ${dark ? "gap-4" : "gap-4"} group`}>
+          <img
+            src={dark ? "/icons/logos/alt_logo_no_bg.png" : "/icons/logos/logo_no_bg.png"}
+            alt="HQG"
+            className={`${dark ? "h-12" : "h-12"} w-auto`}
+          />
           <span className="hidden sm:inline text-xs font-ui font-semibold uppercase tracking-[0.12em] text-muted-foreground">
             Husky Quantitative Group
           </span>

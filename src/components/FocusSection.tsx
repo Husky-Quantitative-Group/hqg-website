@@ -21,7 +21,7 @@ const focusAreas = [
 
 export default function FocusSection() {
   return (
-    <section id="research" className="py-24 lg:py-32 bg-card border-y border-border">
+    <section id="research" className="py-16 lg:py-20 bg-card border-y border-border">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0 }}

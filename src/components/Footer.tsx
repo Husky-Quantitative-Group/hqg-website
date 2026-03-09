@@ -14,7 +14,7 @@ export default function Footer() {
             <p className="font-ui text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground mb-4">
               Links
             </p>
-            <div className="space-y-2">
+            <div className="space-y-2 font-ui font-bold">
               {["About Us", "Research", "Engineering", "Apply"].map((l) => (
                 <a
                   key={l}
@@ -30,7 +30,7 @@ export default function Footer() {
             <p className="font-ui text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground mb-4">
               Connect
             </p>
-            <div className="space-y-2">
+            <div className="space-y-2 font-ui font-bold">
               <a
                 href="https://github.com/Husky-Quantitative-Group"
                 target="_blank"

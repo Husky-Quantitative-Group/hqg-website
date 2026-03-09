@@ -19,6 +19,7 @@ export default {
         editorial: ["Instrument Serif", "Georgia", "serif"],
         ui: ["Manrope", "system-ui", "sans-serif"],
         "mono-hqg": ["JetBrains Mono", "Consolas", "monospace"],
+        handwriting: ["Caveat", "cursive"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -66,6 +67,16 @@ export default {
           stone: "hsl(var(--hqg-stone))",
           chalk: "hsl(var(--hqg-chalk))",
           sepia: "hsl(var(--hqg-sepia))",
+          "terminal-green": "hsl(var(--hqg-terminal-green))",
+          "electric-cyan": "hsl(var(--hqg-electric-cyan))",
+          "signal-amber": "hsl(var(--hqg-signal-amber))",
+          "grid-line": "hsl(var(--hqg-grid-line))",
+        },
+        eng: {
+          cyan: "hsl(var(--eng-cyan))",
+          lime: "hsl(var(--eng-lime))",
+          violet: "hsl(var(--eng-violet))",
+          amber: "hsl(var(--eng-amber))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -108,6 +119,14 @@ export default {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        "spin-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -116,6 +135,8 @@ export default {
         "fade-in": "fade-in 0.5s ease-out forwards",
         "slide-in-left": "slide-in-left 0.5s ease-out forwards",
         "ticker": "ticker 30s linear infinite",
+        "spin-slow": "spin-slow 20s linear infinite",
+        "float": "float 6s ease-in-out infinite",
       },
     },
   },

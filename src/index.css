@@ -55,6 +55,12 @@
     --hqg-chalk: 20 6% 90%;
     --hqg-sepia: 20 8% 83%;
 
+    /* Tech accent colors */
+    --hqg-terminal-green: 142 71% 45%;
+    --hqg-electric-cyan: 185 80% 50%;
+    --hqg-signal-amber: 38 92% 50%;
+    --hqg-grid-line: 25 5% 80%;
+
     --sidebar-background: 37 33% 94.5%;
     --sidebar-foreground: 20 10% 10%;
     --sidebar-primary: 30 82% 31.4%;
@@ -98,13 +104,19 @@
     --hqg-ivory: 60 3% 18%;
     --hqg-inkwell: 40 30% 97%;
     --hqg-graphite: 40 15% 76%;
-    --hqg-umber: 209 68% 67%;
-    --hqg-terracotta: 209 100% 41%;
-    --hqg-verdigris: 209 68% 67%;
-    --hqg-patina: 207 68% 78%;
+    --hqg-umber: 30 70% 55%;
+    --hqg-terracotta: 22 75% 50%;
+    --hqg-verdigris: 176 60% 45%;
+    --hqg-patina: 174 65% 55%;
     --hqg-stone: 48 5% 52%;
     --hqg-chalk: 60 3% 21%;
-    --hqg-sepia: 0 0% 25%;
+    --hqg-sepia: 30 10% 30%;
+
+    /* Engineering accent colors (dark mode) */
+    --eng-cyan: 187 100% 60%;
+    --eng-lime: 120 100% 55%;
+    --eng-violet: 270 100% 72%;
+    --eng-amber: 45 100% 60%;
 
     --sidebar-background: 60 3% 14.5%;
     --sidebar-foreground: 40 30% 97%;
