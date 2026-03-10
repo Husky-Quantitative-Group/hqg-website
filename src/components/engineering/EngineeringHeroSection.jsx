@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import heroFig1 from '../../../website-v2/src/assets/hero-fig-1.jpg';
-import heroFig2 from '../../../website-v2/src/assets/hero-fig-2.jpg';
+import heroFig1 from '../../assets/hero-fig-1.jpg';
+import heroFig2 from '../../assets/hero-fig-2.jpg';
 import PlanetConstellation from './PlanetConstellation';
 
 function TerminalIcon() {
