@@ -1,0 +1,30 @@
+.placeholder-page {
+  min-height: calc(100vh - 4rem - 250px);
+  padding: 7rem 0 5rem;
+  background:
+    radial-gradient(circle at top left, rgba(146, 64, 14, 0.12), transparent 32%),
+    linear-gradient(180deg, var(--color-bg) 0%, var(--color-card) 100%);
+}
+
+.placeholder-page__inner {
+  max-width: 48rem;
+}
+
+.placeholder-page__eyebrow {
+  margin-bottom: 1rem;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.placeholder-page__inner h1 {
+  margin-bottom: 1.25rem;
+}
+
+.placeholder-page__inner p {
+  max-width: 38rem;
+  font-size: 1.05rem;
+}
