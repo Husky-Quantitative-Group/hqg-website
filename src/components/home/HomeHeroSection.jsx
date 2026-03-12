@@ -55,7 +55,7 @@ function HomeHeroSection() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="home-hero__description"
             >
-              HQG is the University of Connecticut&apos;s premier student-run systemic fund,
+              HQG is the University of Connecticut&apos;s first student-run systematic fund,
               focused on researching financial markets and deploying live strategies. Keep up
               with our work through our blog posts.
             </motion.p>
