@@ -16,7 +16,7 @@ const researchPosts = JSON.parse(researchPostsRaw);
 
 const { render } = await import(pathToFileURL(ssrEntryPath).href);
 
-const staticRoutes = ['/', '/team', '/research', '/software', '/apply'];
+const staticRoutes = ['/', '/team', '/research', '/software', '/apply', '/engineering', '/blog'];
 const researchRoutes = researchPosts.map((post) => `/research/${post.slug}`);
 const routes = [...staticRoutes, ...researchRoutes];
 
