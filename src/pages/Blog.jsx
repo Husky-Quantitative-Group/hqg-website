@@ -8,8 +8,7 @@ function Blog() {
         <p className="placeholder-page__eyebrow">Blog</p>
         <h1>HQG blog is coming soon.</h1>
         <p>
-          The homepage now includes the v2 blog preview. This route is a placeholder until the
-          full blog system is refactored into the current app.
+          Recruiting tips, engineering deep dives, and research insights from the HQG team. Stay tuned for our first post!
         </p>
       </div>
     </div>
