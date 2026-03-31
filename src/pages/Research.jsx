@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/Research.css';
 import insights from '../data/researchPosts.json';
 import carbonArcLogo from '../assets/misc/CarbonArc.png';
+import dataBentoLogo from '../assets/misc/DataBento.png';
 
 function Research() {
   return (
@@ -29,8 +30,25 @@ function Research() {
               alt="Carbon Arc"
             />
           </div>
-          <p>
+          <p className="partner-description">
             We partner with Carbon Arc to access alternative datasets, including credit card activity, foot traffic, TikTok Shop metrics, and much more. This improves our ability to measure real-world behavior and validate signals with greater precision.
+          </p>
+          <div className="partner-header">
+            <div>
+              <h2>HQG x DataBento</h2>
+              <p className="partner-subtitle">
+                A partnership that gives us access to high-quality, low-latency market data.
+              </p>
+            </div>
+            <img
+              className="partner-logo"
+              src={dataBentoLogo}
+              alt="DataBento"
+            />
+          </div>
+          <p className="partner-description">
+              DataBento provides us with L3 order book visibility across equities, futures, and options from direct exchange feeds.
+              We look forward to leveraging this data to further explore complex liquidity dynamics and develop higher-frequency strategies.
           </p>
           <a className="partner-cta" href="mailto:connect@uconnquant.com">
             Partner with HQG
