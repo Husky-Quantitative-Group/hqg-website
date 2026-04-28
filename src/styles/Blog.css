@@ -129,6 +129,54 @@
   transform: translateY(-1px);
 }
 
+.blog-post {
+  max-width: 56rem;
+}
+
+.blog-post__back {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.blog-post__back:hover {
+  color: var(--color-text);
+}
+
+.blog-post__header {
+  margin-bottom: 1.5rem;
+}
+
+.blog-post__header h1 {
+  margin-bottom: 0.75rem;
+}
+
+.blog-post__author {
+  font-size: 0.98rem;
+  color: var(--color-subtle);
+}
+
+.blog-post__raw-markdown {
+  overflow-x: auto;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.28rem;
+  background: color-mix(in srgb, var(--color-card) 92%, transparent);
+  box-shadow: var(--color-shadow);
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--color-text);
+}
+
 @media (max-width: 768px) {
   .blog-page {
     padding: 6rem 0 4rem;

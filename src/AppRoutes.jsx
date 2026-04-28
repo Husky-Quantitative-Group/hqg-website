@@ -9,6 +9,7 @@ import Software from './pages/Software';
 import Apply from './pages/Apply';
 import Engineering from './pages/Engineering';
 import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
 function AppRoutes() {
   return (
@@ -22,6 +23,7 @@ function AppRoutes() {
         <Route path="/apply" element={<Apply />} />
         <Route path="/engineering" element={<Engineering />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
       </Route>
     </Routes>
   );

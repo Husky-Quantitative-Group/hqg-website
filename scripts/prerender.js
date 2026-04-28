@@ -17,12 +17,15 @@ const blogs = JSON.parse(blogsRaw);
 const { render } = await import(pathToFileURL(ssrEntryPath).href);
 
 const staticRoutes = ['/', '/team', '/research', '/software', '/apply', '/engineering', '/blog'];
+const blogRoutes = blogs
+  .filter((post) => post.published)
+  .map((post) => `/blog/${post.slug}`);
 const researchRoutes = blogs
   .filter(
     (post) => post.published && post.tags.some((tag) => tag.toLowerCase() === 'research')
   )
   .map((post) => `/research/${post.slug}`);
-const routes = [...staticRoutes, ...researchRoutes];
+const routes = [...staticRoutes, ...blogRoutes, ...researchRoutes];
 
 for (const url of routes) {
   const appHtml = await render(url);
