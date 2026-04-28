@@ -1,0 +1,15 @@
+[
+  {
+    "slug": "welcome-to-hqg",
+    "title": "Welcome to HQG",
+    "excerpt": "A quick introduction to Husky Quantitative Group and the kind of work we are building across research and engineering.",
+    "author": "HQG",
+    "date": "2026-01-22",
+    "readTime": "3 min read",
+    "tags": [],
+    "featured": true,
+    "published": true,
+    "markdownFile": "welcome-to-hqg.md",
+    "heroImage": null
+  }
+]
