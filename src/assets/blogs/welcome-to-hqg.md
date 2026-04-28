@@ -1,32 +1,17 @@
 # Welcome to HQG
 
-Husky Quantitative Group is a student-run organization focused on building strong researchers and engineers through serious, hands-on work.
+Placeholder draft for this post.
 
-We care about the full process behind quantitative investing: generating ideas, validating them rigorously, building reliable systems, and learning how to operate with discipline.
+## Overview
 
-## What we do
+Add the intro for this post here.
 
-Our work sits at the intersection of research, engineering, and markets. Members spend time thinking about:
+## Main Points
 
-- systematic strategy development
-- data and infrastructure
-- statistical validation
-- implementation quality
-- long-term learning and mentorship
+- Point one
+- Point two
+- Point three
 
-## How we work
+## Notes
 
-We want people to build real technical judgment. That means writing code, asking good questions, testing assumptions, and improving ideas until they are defensible.
-
-The goal is not to look busy. The goal is to produce work that holds up under scrutiny.
-
-## What this blog will cover
-
-This blog will cover what we are learning across the group, including:
-
-- engineering write-ups
-- research notes
-- recruiting and onboarding advice
-- reflections on projects, tools, and process
-
-If you are interested in quantitative finance, systems building, or applied research, this is where we will share the work in public.
+Add supporting details, links, screenshots, or code snippets here.

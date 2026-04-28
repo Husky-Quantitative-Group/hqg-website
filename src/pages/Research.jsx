@@ -1,11 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Research.css';
-import insights from '../data/researchPosts.json';
+import blogs from '../data/blogs.json';
 import carbonArcLogo from '../assets/misc/CarbonArc.png';
 import dataBentoLogo from '../assets/misc/DataBento.png';
 
 function Research() {
+  const researchBlogs = blogs.filter(
+    (post) => post.published && post.tags.some((tag) => tag.toLowerCase() === 'research')
+  );
+
   return (
     <div className="research">
       <div className="container">
@@ -81,39 +85,42 @@ function Research() {
           </p>
         </section>
 
-      {/* uncomment when we have motion*/}
-      {/*
         <section className="insights-section">
           <div className="insights-header">
             <div>
               <h2>HQG Insights</h2>
               <p className="insights-subtitle">
-                A biweekly research blog covering ideas we find interesting.
+                Research notes, market observations, and technical write-ups from the team.
               </p>
             </div>
-            <span className="insights cadence">Every 2 weeks</span>
+            <span className="insights cadence">Tag: research</span>
           </div>
 
-          <div className="articles-grid">
-            {insights.map((article) => (
-              <article key={article.id} className="article-card">
-                <div className="article-header">
-                  <span className="category">{article.category}</span>
-                  <span className="date">{article.date}</span>
-                </div>
-                <h3>{article.title}</h3>
-                <p className="excerpt">{article.excerpt}</p>
-                <footer className="article-footer">
-                  <span className="author">By {article.author}</span>
-                  <Link className="read-more" to={`/research/${article.slug}`}>
-                    Read More
-                  </Link>
-                </footer>
-              </article>
-            ))}
-          </div>
+          {researchBlogs.length > 0 ? (
+            <div className="articles-grid">
+              {researchBlogs.map((article) => (
+                <article key={article.slug} className="article-card">
+                  <div className="article-header">
+                    <span className="category">Research</span>
+                    <span className="date">{article.date}</span>
+                  </div>
+                  <h3>{article.title}</h3>
+                  <p className="excerpt">{article.excerpt}</p>
+                  <footer className="article-footer">
+                    <span className="author">By {article.author}</span>
+                    <Link className="read-more" to={`/blog/${article.slug}`}>
+                      Read More
+                    </Link>
+                  </footer>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p className="research-empty-state">
+              No research-tagged posts are published yet.
+            </p>
+          )}
         </section>
-        */}
       </div>
     </div>
   );

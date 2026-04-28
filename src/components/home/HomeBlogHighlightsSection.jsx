@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import researchPosts from '../../data/researchPosts.json';
+import blogs from '../../data/blogs.json';
 
 const categoryClasses = {
   Research: 'home-category-pill home-category-pill--research',
@@ -32,23 +32,36 @@ const fallbackRecentPosts = [
   },
 ];
 
+function getCategoryLabel(post) {
+  if (post.tags.some((tag) => tag.toLowerCase() === 'research')) {
+    return 'Research';
+  }
+
+  if (post.tags.some((tag) => tag.toLowerCase() === 'engineering')) {
+    return 'Engineering';
+  }
+
+  return 'General';
+}
+
 function getCategoryClass(category) {
   return categoryClasses[category] || 'home-category-pill';
 }
 
 function getFeaturedPost() {
-  const firstPost = researchPosts[0];
+  const publishedPosts = blogs.filter((post) => post.published);
+  const firstPost = publishedPosts.find((post) => post.featured) || publishedPosts[0];
 
   if (firstPost) {
     return {
-      id: firstPost.slug || firstPost.id,
-      category: firstPost.category,
+      id: firstPost.slug,
+      category: getCategoryLabel(firstPost),
       date: firstPost.date,
       title: firstPost.title,
       excerpt: firstPost.excerpt,
       author: firstPost.author,
-      readTime: '5 min read',
-      href: firstPost.slug ? `/research/${firstPost.slug}` : '/research',
+      readTime: firstPost.readTime,
+      href: `/blog/${firstPost.slug}`,
     };
   }
 
@@ -66,16 +79,19 @@ function getFeaturedPost() {
 
 function HomeBlogHighlightsSection() {
   const featuredPost = getFeaturedPost();
-  const recentPosts = researchPosts.slice(1, 4).map((post) => ({
-    id: post.slug || post.id,
-    category: post.category,
-    date: post.date,
-    title: post.title,
-    excerpt: post.excerpt,
-    author: post.author,
-    readTime: '5 min read',
-    href: post.slug ? `/research/${post.slug}` : '/research',
-  }));
+  const recentPosts = blogs
+    .filter((post) => post.published && post.slug !== featuredPost.id)
+    .slice(0, 3)
+    .map((post) => ({
+      id: post.slug,
+      category: getCategoryLabel(post),
+      date: post.date,
+      title: post.title,
+      excerpt: post.excerpt,
+      author: post.author,
+      readTime: post.readTime,
+      href: `/blog/${post.slug}`,
+    }));
   const sidebarPosts = recentPosts.length > 0 ? recentPosts : fallbackRecentPosts.map((post) => ({
     ...post,
     href: '/blog',
