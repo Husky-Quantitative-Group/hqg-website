@@ -9,7 +9,7 @@
     "tags": [],
     "featured": true,
     "published": true,
-    "markdownFile": "welcome-to-hqg.md",
+    "markdownFile": "welcome-to-hqg.mdx",
     "heroImage": null
   },
   {
@@ -21,8 +21,8 @@
     "readTime": "3 min read",
     "tags": ["engineering"],
     "featured": true,
-    "published": true,
-    "markdownFile": "hqg-dash-v1.0.0.md",
+    "published": false,
+    "markdownFile": "dashboard-updates/hqg-dash-v1.0.0.mdx",
     "heroImage": null
   },
   {
@@ -34,8 +34,8 @@
     "readTime": "3 min read",
     "tags": ["engineering"],
     "featured": true,
-    "published": true,
-    "markdownFile": "hqg-dash-v1.0.1.md",
+    "published": false,
+    "markdownFile": "dashboard-updates/hqg-dash-v1.0.1.mdx",
     "heroImage": null
   },
   {
@@ -47,8 +47,8 @@
     "readTime": "3 min read",
     "tags": ["engineering"],
     "featured": true,
-    "published": true,
-    "markdownFile": "hqg-dash-v1.1.0.md",
+    "published": false,
+    "markdownFile": "dashboard-updates/hqg-dash-v1.1.0.mdx",
     "heroImage": null
   },
   {
@@ -60,8 +60,8 @@
     "readTime": "3 min read",
     "tags": ["engineering"],
     "featured": true,
-    "published": true,
-    "markdownFile": "hqg-dash-v1.1.1.md",
+    "published": false,
+    "markdownFile": "dashboard-updates/hqg-dash-v1.1.1.mdx",
     "heroImage": null
   }
 ]

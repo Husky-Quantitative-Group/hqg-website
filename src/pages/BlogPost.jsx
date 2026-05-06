@@ -3,9 +3,8 @@ import { Link, useParams } from 'react-router-dom';
 import blogs from '../data/blogs.json';
 import '../styles/Blog.css';
 
-const blogMarkdownFiles = import.meta.glob('../assets/blogs/*.md', {
+const blogMdxFiles = import.meta.glob('../assets/blogs/**/*.mdx', {
   eager: true,
-  query: '?raw',
   import: 'default',
 });
 
@@ -17,11 +16,11 @@ function BlogPost() {
     [slug]
   );
 
-  const markdown = post
-    ? blogMarkdownFiles[`../assets/blogs/${post.markdownFile}`]
+  const PostContent = post
+    ? blogMdxFiles[`../assets/blogs/${post.markdownFile}`]
     : null;
 
-  if (!post || !markdown) {
+  if (!post || !PostContent) {
     return (
       <div className="blog-page">
         <div className="container blog-post">
@@ -30,7 +29,7 @@ function BlogPost() {
           </Link>
           <h1>Post Not Found</h1>
           <p className="blog-page__intro">
-            We could not find that blog post or its markdown file.
+            We could not find that blog post or its MDX file.
           </p>
         </div>
       </div>
@@ -53,9 +52,9 @@ function BlogPost() {
           <p className="blog-post__author">By {post.author}</p>
         </div>
 
-        <pre className="blog-post__raw-markdown">
-          <code>{markdown}</code>
-        </pre>
+        <article className="blog-post__content">
+          <PostContent />
+        </article>
       </div>
     </div>
   );
