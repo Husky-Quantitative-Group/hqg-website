@@ -15,3 +15,234 @@ Add the intro for this post here.
 ## Notes
 
 Add supporting details, links, screenshots, or code snippets here.
+
+# MDX Authoring Template
+
+Use this file as a starting point when writing a new blog post. The examples below are intentionally broad so you can copy the patterns you need and delete the rest.
+
+---
+
+## 1. Basic Structure
+
+Every post can start with a title and a short opening paragraph.
+
+You can write normal paragraphs exactly like Markdown:
+
+This is a standard paragraph. Write naturally and keep lines readable. You do not need to wrap every sentence onto its own line unless you prefer that style.
+
+## 2. Text Formatting
+
+You can use the usual Markdown formatting:
+
+- **Bold text**
+- *Italic text*
+- ***Bold and italic***
+- `inline code`
+- [A standard link](https://example.com)
+
+You can also write numbered lists:
+
+1. First step
+2. Second step
+3. Third step
+
+And nested emphasis inside text like **important `code` terms**.
+
+## 3. Headings
+
+Use headings to break the post into clear sections.
+
+### Smaller Section
+
+This is a subsection under an `h2`.
+
+#### Even Smaller Section
+
+Only use deeper headings when they improve readability.
+
+## 4. Quotes and Notes
+
+Blockquotes are good for callouts, warnings, or quoted material.
+
+> This is a blockquote.
+>
+> You can use it for a note, warning, or excerpt.
+
+## 5. Code Blocks
+
+Use fenced code blocks for shell commands, JSON, JavaScript, Python, or anything else.
+
+```bash
+npm run build
+npm run build:static
+```
+
+```json
+{
+  "title": "Example Blog Post",
+  "published": true
+}
+```
+
+```js
+function greet(name) {
+  return `Hello, ${name}`;
+}
+```
+
+## 6. Horizontal Rules
+
+Use `---` to separate major sections when helpful.
+
+---
+
+## 7. Inline HTML / JSX
+
+MDX lets you include HTML-like elements directly in the document.
+
+<div style={{ padding: '1rem', border: '1px solid #ccc', borderRadius: '8px' }}>
+  This is a plain JSX block inside MDX.
+</div>
+
+That is one of the main differences between Markdown and MDX: you can mix prose with actual rendered markup.
+
+## 8. Simple Styled Callout
+
+You can create lightweight callouts inline without building a separate component:
+
+<div
+  style={{
+    padding: '1rem',
+    borderLeft: '4px solid #92400e',
+    background: 'rgba(146, 64, 14, 0.08)',
+    borderRadius: '6px',
+    margin: '1rem 0'
+  }}
+>
+  <strong>Tip:</strong> Start with normal Markdown. Only use JSX when the content really needs custom layout or styling.
+</div>
+
+## 9. Images
+
+If you want to show an image, import it at the top of the file and then render it.
+
+Example:
+
+```mdx
+import quantGroupPhoto from '../../groupshots/quant-group-s26.png';
+
+<img src={quantGroupPhoto} alt="HQG group photo" />
+```
+
+Here is a real example using one of the repo images:
+
+```mdx
+import quantGroupPhoto from '../../groupshots/quant-group-s26.png';
+
+<figure>
+  <img
+    src={quantGroupPhoto}
+    alt="HQG group photo"
+    style={{ width: '100%', borderRadius: '12px' }}
+  />
+  <figcaption>Example figure caption using a real project asset.</figcaption>
+</figure>
+```
+
+If you want to keep a draft image block around without rendering it yet, comment it out:
+
+```mdx
+{/* 
+import quantGroupPhoto from '../../groupshots/quant-group-s26.png';
+
+<figure>
+  <img src={quantGroupPhoto} alt="HQG group photo" />
+  <figcaption>An optional caption.</figcaption>
+</figure>
+*/}
+```
+
+## 10. Reusable Variables
+
+You can declare values in MDX and reuse them later in the document.
+
+export const version = 'v1.2.3';
+
+This post is referencing version **{version}**.
+
+That can be useful when the same term, release number, or date appears multiple times.
+
+## 11. Small Interactive Logic
+
+MDX can include JavaScript expressions:
+
+{['research', 'engineering', 'markets'].map((topic) => (
+  <span
+    key={topic}
+    style={{
+      display: 'inline-block',
+      marginRight: '0.5rem',
+      marginBottom: '0.5rem',
+      padding: '0.2rem 0.5rem',
+      border: '1px solid #999',
+      borderRadius: '999px'
+    }}
+  >
+    {topic}
+  </span>
+))}
+
+Use this carefully. Most blog posts should stay mostly static and readable.
+
+## 12. Commenting Things Out
+
+You can comment out JSX-style blocks like this:
+
+```mdx
+{/* This content will not render */}
+```
+
+That is useful for drafts, notes to yourself, or temporarily hiding an image block.
+
+## 13. Suggested Writing Pattern
+
+If you are not sure how to structure a post, use this outline:
+
+1. What is this post about?
+2. Why does it matter?
+3. What changed or what did you learn?
+4. What are the key details?
+5. What should the reader take away?
+
+## 14. Minimal Starter Copy
+
+If you want the smallest possible starting point, copy this:
+
+```mdx
+# Post Title
+
+Short intro paragraph.
+
+## Context
+
+Explain the setup.
+
+## Main Idea
+
+Explain the important part.
+
+## Takeaways
+
+- Point one
+- Point two
+- Point three
+```
+
+## 15. Final Advice
+
+Treat MDX like Markdown with escape hatches.
+
+- Default to plain Markdown.
+- Use JSX for layout, callouts, or special presentation.
+- Keep the file readable in raw text form.
+- Do not overuse inline styling once the project has shared MDX components.
