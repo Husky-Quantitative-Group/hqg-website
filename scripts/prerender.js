@@ -16,7 +16,7 @@ const blogs = JSON.parse(blogsRaw);
 
 const { render } = await import(pathToFileURL(ssrEntryPath).href);
 
-const staticRoutes = ['/', '/team', '/research', '/software', '/apply', '/engineering', '/blog'];
+const staticRoutes = ['/', '/team', '/research', '/software', '/engineering', '/blog'];
 const blogRoutes = blogs
   .filter((post) => post.published)
   .map((post) => `/blog/${post.slug}`);

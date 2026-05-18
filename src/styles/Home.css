@@ -428,8 +428,7 @@
   gap: 1rem;
 }
 
-.home-blog__header-row h2,
-.home-apply__header h2 {
+.home-blog__header-row h2 {
   font-size: clamp(1.875rem, 4vw, 2.25rem);
   line-height: 1.2;
   letter-spacing: -0.01em;
@@ -599,108 +598,6 @@
   font-size: 0.95rem;
 }
 
-.home-apply {
-  background: var(--color-bg);
-}
-
-.home-apply__header {
-  max-width: 42rem;
-  margin: 0 auto 3rem;
-  text-align: center;
-}
-
-.home-apply__header h2 {
-  margin-bottom: 1rem;
-}
-
-.home-apply__intro {
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-.home-role-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem;
-}
-
-.home-role-card {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  border: 1px solid var(--color-border);
-  border-radius: 0.35rem;
-  background: var(--color-card);
-}
-
-.home-role-card h3 {
-  margin-bottom: 0.85rem;
-  font-family: var(--font-ui);
-  font-weight: 500;
-}
-
-.home-role-card__description {
-  margin-bottom: 1.5rem;
-  font-size: 0.96rem;
-}
-
-.home-role-card__label {
-  margin-bottom: 0.8rem;
-  font-family: var(--font-mono);
-  font-size: 0.76rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-subtle);
-}
-
-.home-role-card__projects ul {
-  display: grid;
-  gap: 0.75rem;
-  list-style: none;
-}
-
-.home-role-card__projects li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  font-size: 0.95rem;
-  color: var(--color-text);
-}
-
-.home-role-card__bullet {
-  display: inline-flex;
-  min-width: 0.85rem;
-  margin-top: 0.08rem;
-  font-weight: 700;
-}
-
-.home-role-card__bullet--verdigris {
-  color: var(--color-verdigris);
-}
-
-.home-role-card__bullet--umber {
-  color: var(--color-primary);
-}
-
-.home-apply__cta {
-  margin-top: 2.5rem;
-  text-align: center;
-}
-
-.home-apply__cta p {
-  margin-top: 1rem;
-  font-size: 0.95rem;
-}
-
-.home-apply__cta a:not(.site-button) {
-  color: var(--color-primary);
-  text-decoration: none;
-}
-
-.home-apply__cta a:not(.site-button):hover {
-  text-decoration: underline;
-}
-
 @keyframes home-ticker {
   from {
     transform: translateX(0);
@@ -719,8 +616,7 @@
 
   .home-hero__grid,
   .home-about__intro,
-  .home-blog__grid,
-  .home-role-grid {
+  .home-blog__grid {
     grid-template-columns: 1fr;
   }
 
@@ -775,7 +671,6 @@
     flex-direction: column;
   }
 
-  .home-role-card,
   .home-pillars__card {
     padding: 1.5rem;
   }

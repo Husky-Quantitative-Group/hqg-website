@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../styles/Team.css';
 import quantGroupS26 from '../assets/groupshots/quant-group-s26.png';
 import leadership from '../data/leadership.json';
@@ -160,11 +159,6 @@ function Team() {
         </section>
       */}
 
-        <section className="team-section jobs">
-          <h2>Join Our Team</h2>
-          <p>We're always looking for ambitious students interested in quantitative finance, software engineering, and research.</p>
-          <Link className="cta-button" to="/apply">Apply Now!</Link>
-        </section>
       </div>
     </div>
   );

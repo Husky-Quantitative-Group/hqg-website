@@ -45,10 +45,6 @@ function Navigation() {
               {link.label}
             </a>
           ))}
-
-          <a href="/#apply" className="site-nav__apply">
-            Apply
-          </a>
         </div>
 
         <div className="site-nav__mobile-controls">
@@ -79,13 +75,6 @@ function Navigation() {
               {link.label}
             </a>
           ))}
-          <a
-            href="/#apply"
-            className="site-nav__mobile-apply"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Apply -
-          </a>
         </div>
       </div>
     </nav>

@@ -18,7 +18,6 @@ function Footer() {
             <a href="/#about">About Us</a>
             <a href="/research">Research</a>
             <a href="/engineering">Engineering</a>
-            <a href="/#apply">Apply</a>
           </div>
         </div>
 
