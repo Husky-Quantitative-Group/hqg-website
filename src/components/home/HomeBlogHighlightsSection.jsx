@@ -6,31 +6,10 @@ import blogs from '../../data/blogs.json';
 const categoryClasses = {
   Research: 'home-category-pill home-category-pill--research',
   Engineering: 'home-category-pill home-category-pill--engineering',
-  Career: 'home-category-pill home-category-pill--career',
-  Markets: 'home-category-pill home-category-pill--markets',
   Announcement: 'home-category-pill home-category-pill--announcement',
 };
 
-const fallbackRecentPosts = [
-  {
-    id: 'blog-fallback-1',
-    category: 'Engineering',
-    date: 'Coming Soon',
-    title: 'Infrastructure write-ups are on the way',
-    excerpt: 'We are building out a dedicated home for engineering posts, systems deep dives, and project retrospectives.',
-    author: 'HQG Engineering',
-    readTime: 'Soon',
-  },
-  {
-    id: 'blog-fallback-2',
-    category: 'Career',
-    date: 'Coming Soon',
-    title: 'Member recruiting and career notes',
-    excerpt: 'Expect practical posts on recruiting prep, project work, and how we train new members across research and engineering.',
-    author: 'HQG',
-    readTime: 'Soon',
-  },
-];
+const welcomeBlogSlug = 'welcome-to-hqg';
 
 function getCategoryLabel(post) {
   if (post.tags.some((tag) => tag.toLowerCase() === 'research')) {
@@ -48,9 +27,10 @@ function getCategoryClass(category) {
   return categoryClasses[category] || 'home-category-pill';
 }
 
-function getFeaturedPost() {
+function getHomePost() {
   const publishedPosts = blogs.filter((post) => post.published);
-  const firstPost = publishedPosts.find((post) => post.featured) || publishedPosts[0];
+  const welcomePost = publishedPosts.find((post) => post.slug === welcomeBlogSlug);
+  const firstPost = welcomePost || publishedPosts[0];
 
   if (firstPost) {
     return {
@@ -78,101 +58,45 @@ function getFeaturedPost() {
 }
 
 function HomeBlogHighlightsSection() {
-  const featuredPost = getFeaturedPost();
-  const recentPosts = blogs
-    .filter((post) => post.published && post.slug !== featuredPost.id)
-    .slice(0, 3)
-    .map((post) => ({
-      id: post.slug,
-      category: getCategoryLabel(post),
-      date: post.date,
-      title: post.title,
-      excerpt: post.excerpt,
-      author: post.author,
-      readTime: post.readTime,
-      href: `/blog/${post.slug}`,
-    }));
-  const sidebarPosts = recentPosts.length > 0 ? recentPosts : fallbackRecentPosts.map((post) => ({
-    ...post,
-    href: '/blog',
-  }));
+  const homePost = getHomePost();
 
   return (
     <section className="home-blog section-spacing">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+        <motion.article
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="home-blog__header"
+          transition={{ duration: 0.5 }}
+          className="home-blog__featured"
         >
-          <p className="home-section-label">From the Blog</p>
-          <div className="home-blog__header-row">
-            <h2>Latest insights</h2>
-            <Link to="/blog" className="home-inline-link">
-              View all posts -
-            </Link>
-          </div>
-        </motion.div>
-
-        <div className="home-blog__grid">
-          <motion.article
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="home-blog__featured"
-          >
-            <Link to={featuredPost.href} className="home-blog__featured-link">
-              <div className="home-blog__featured-visual">
-                <div className="home-blog__featured-gradient" />
-                <div className="home-blog__featured-code">{'{ }'}</div>
+          <div className="home-blog__featured-layout">
+            <div className="home-blog__featured-body">
+              <p className="home-section-label">From the Blog</p>
+              <div className="home-blog__meta">
+                <span className={getCategoryClass(homePost.category)}>{homePost.category}</span>
+                <span className="home-blog__date">{homePost.date}</span>
               </div>
-              <div className="home-blog__featured-body">
-                <div className="home-blog__meta">
-                  <span className={getCategoryClass(featuredPost.category)}>{featuredPost.category}</span>
-                  <span className="home-blog__date">{featuredPost.date}</span>
-                </div>
-                <h3>{featuredPost.title}</h3>
-                <p>{featuredPost.excerpt}</p>
-                <div className="home-blog__author-row">
-                  <span className="home-blog__author-dot" aria-hidden="true" />
-                  <span>{featuredPost.author}</span>
-                  <span className="home-blog__divider">.</span>
-                  <span>{featuredPost.readTime}</span>
-                </div>
+              <h3>{homePost.title}</h3>
+              <p>{homePost.excerpt}</p>
+              <div className="home-blog__author-row">
+                <span className="home-blog__author-dot" aria-hidden="true" />
+                <span>{homePost.author}</span>
+                <span className="home-blog__divider">.</span>
+                <span>{homePost.readTime}</span>
               </div>
-            </Link>
-          </motion.article>
+            </div>
 
-          <div className="home-blog__sidebar">
-            <h4>Recent Posts</h4>
-            {sidebarPosts.map((post, index) => (
-              <motion.article
-                key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="home-blog__sidebar-card"
-              >
-                <Link to={post.href}>
-                  <div className="home-blog__meta">
-                    <span className={getCategoryClass(post.category)}>{post.category}</span>
-                    <span className="home-blog__date">{post.date}</span>
-                  </div>
-                  <h3>{post.title}</h3>
-                  <p>{post.excerpt}</p>
-                  <div className="home-blog__sidebar-footer">
-                    <span>{post.author}</span>
-                    <span className="home-blog__divider">.</span>
-                    <span>{post.readTime}</span>
-                  </div>
-                </Link>
-              </motion.article>
-            ))}
+            <div className="home-blog__actions" aria-label="Blog actions">
+              <Link to={homePost.href} className="site-button site-button--primary">
+                Read welcome post
+              </Link>
+              <Link to="/blog" className="site-button site-button--secondary">
+                View all blogs
+              </Link>
+            </div>
           </div>
-        </div>
+        </motion.article>
       </div>
     </section>
   );
