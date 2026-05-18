@@ -16,8 +16,8 @@ function Footer() {
           <p className="site-footer__label">Links</p>
           <div className="site-footer__links">
             <a href="/#about">About Us</a>
-            <a href="/research">Research</a>
-            <a href="/engineering">Engineering</a>
+            <a href="/team">Team</a>
+            <a href="/blog">Blog</a>
           </div>
         </div>
 

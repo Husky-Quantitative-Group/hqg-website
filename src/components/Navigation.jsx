@@ -5,10 +5,7 @@ import '../styles/Navigation.css';
 const navLinks = [
   { label: 'About Us', href: '/#about' },
   { label: 'Team', href: '/team' },
-  { label: 'Research', href: '/research' },
-  { label: 'Engineering', href: '/engineering' },
   { label: 'Blog', href: '/blog' },
-  { label: 'GitHub', href: 'https://github.com/Husky-Quantitative-Group', external: true },
 ];
 
 function Navigation() {
