@@ -24,7 +24,7 @@ const pillars = [
 ];
 
 const stats = [
-  { value: '$1,000', label: 'AUM' },
+  { value: '$26,000', label: 'AUM' },
   { value: '19', label: 'Members + Alumni' },
   { value: '100%', label: 'Placement Rate' },
   { value: '$140,000', label: 'Median Starting Salary' },
