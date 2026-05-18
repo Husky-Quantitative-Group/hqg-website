@@ -88,21 +88,39 @@ MDX lets you include HTML-like elements directly in the document.
 
 That is one of the main differences between Markdown and MDX: you can mix prose with actual rendered markup.
 
-## 8. Simple Styled Callout
+## 8. Reusable Blog Components
 
-You can create lightweight callouts inline without building a separate component:
+Blog posts can use a small set of shared MDX components without importing them:
 
-<div
-  style={{
-    padding: '1rem',
-    borderLeft: '4px solid #92400e',
-    background: 'rgba(146, 64, 14, 0.08)',
-    borderRadius: '6px',
-    margin: '1rem 0'
-  }}
->
-  <strong>Tip:</strong> Start with normal Markdown. Only use JSX when the content really needs custom layout or styling.
-</div>
+```mdx
+<BlogFigure
+  src={imageAsset}
+  alt="Describe the image"
+  caption="Optional caption."
+/>
+
+<BlogStatList
+  items={[
+    { value: '5%', label: 'acceptance rate', detail: 'Optional detail text.' },
+    { value: '300+', label: 'student community', detail: 'Optional detail text.' }
+  ]}
+/>
+
+<BlogNameList
+  title="Alumni have joined"
+  items={['SpaceX', 'Microsoft', 'JPMorgan Chase']}
+  description="Optional supporting sentence."
+/>
+
+<BlogLinkList
+  links={[
+    { label: 'GitHub', href: 'https://github.com/Husky-Quantitative-Group', external: true },
+    { label: 'Email', href: 'mailto:connect@uconnquant.com' }
+  ]}
+/>
+```
+
+Default to plain Markdown. Use these components when a figure, stats, names, or links should look consistent across posts.
 
 ## 9. Images
 
@@ -121,14 +139,11 @@ Here is a real example using one of the repo images:
 ```mdx
 import quantGroupPhoto from '../../groupshots/quant-group-s26.png';
 
-<figure>
-  <img
-    src={quantGroupPhoto}
-    alt="HQG group photo"
-    style={{ width: '100%', borderRadius: '12px' }}
-  />
-  <figcaption>Example figure caption using a real project asset.</figcaption>
-</figure>
+<BlogFigure
+  src={quantGroupPhoto}
+  alt="HQG group photo"
+  caption="Example figure caption using a real project asset."
+/>
 ```
 
 If you want to keep a draft image block around without rendering it yet, comment it out:
