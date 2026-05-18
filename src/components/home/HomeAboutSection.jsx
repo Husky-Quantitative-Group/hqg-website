@@ -61,6 +61,7 @@ function HomeAboutSection() {
 
             <div className="home-about__copy">
               <motion.h2
+                className="home-section-heading"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

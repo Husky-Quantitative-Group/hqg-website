@@ -1,6 +1,7 @@
 import React from 'react';
 import HomeHeroSection from '../components/home/HomeHeroSection';
 import HomeAboutSection from '../components/home/HomeAboutSection';
+import HomeSponsorsSection from '../components/home/HomeSponsorsSection';
 import HomeBlogHighlightsSection from '../components/home/HomeBlogHighlightsSection';
 import '../styles/Home.css';
 
@@ -9,6 +10,7 @@ function Home() {
     <div className="home-page">
       <HomeHeroSection />
       <HomeAboutSection />
+      <HomeSponsorsSection />
       <HomeBlogHighlightsSection />
     </div>
   );
