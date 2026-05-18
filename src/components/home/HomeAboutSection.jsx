@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import presentation2 from '../../assets/groupshots/presentation2.jpg';
+import hqgShakespeare from '../../assets/groupshots/hqg-shakespeare.JPG';
 
 const pillars = [
   {
@@ -24,7 +24,7 @@ const pillars = [
 ];
 
 const stats = [
-  { value: '$1,000', label: 'AUM' },
+  { value: '$26,000', label: 'AUM' },
   { value: '19', label: 'Members + Alumni' },
   { value: '100%', label: 'Placement Rate' },
   { value: '$140,000', label: 'Median Starting Salary' },
@@ -53,14 +53,15 @@ function HomeAboutSection() {
               className="home-about__image-wrap"
             >
               <img
-                src={presentation2}
-                alt="HQG members presenting quantitative strategies"
+                src={hqgShakespeare}
+                alt="HQG members outside Shakespeare Theatre"
                 className="home-about__image"
               />
             </motion.div>
 
             <div className="home-about__copy">
               <motion.h2
+                className="home-section-heading"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

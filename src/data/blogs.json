@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "welcome-to-hqg",
+    "title": "Welcome to HQG",
+    "excerpt": "How HQG is building a student-run systematic fund around live capital, quantitative research, production engineering, and real accountability.",
+    "author": "Husky Quantitative Group",
+    "date": "2026-01-22",
+    "readTime": "4 min read",
+    "tags": ["research", "engineering"],
+    "featured": true,
+    "published": true,
+    "markdownFile": "welcome-to-hqg.mdx",
+    "heroImage": null
+  },
+  {
+    "slug": "hqg-dash-v1.0.0",
+    "title": "HQG Dashboard v1.0.0",
+    "excerpt": "",
+    "author": "Josef Karpinski",
+    "date": "2026-03-04",
+    "readTime": "3 min read",
+    "tags": ["engineering"],
+    "featured": true,
+    "published": false,
+    "markdownFile": "dashboard-updates/hqg-dash-v1.0.0.mdx",
+    "heroImage": null
+  },
+  {
+    "slug": "hqg-dash-v1.0.1",
+    "title": "HQG Dashboard v1.0.1",
+    "excerpt": "",
+    "author": "Josef Karpinski",
+    "date": "2026-03-05",
+    "readTime": "3 min read",
+    "tags": ["engineering"],
+    "featured": true,
+    "published": false,
+    "markdownFile": "dashboard-updates/hqg-dash-v1.0.1.mdx",
+    "heroImage": null
+  },
+  {
+    "slug": "hqg-dash-v1.1.0",
+    "title": "HQG Dashboard v1.1.0",
+    "excerpt": "",
+    "author": "HQG",
+    "date": "2026-04-15",
+    "readTime": "3 min read",
+    "tags": ["engineering"],
+    "featured": true,
+    "published": false,
+    "markdownFile": "dashboard-updates/hqg-dash-v1.1.0.mdx",
+    "heroImage": null
+  },
+  {
+    "slug": "hqg-dash-v1.1.1",
+    "title": "HQG Dashboard v1.1.1",
+    "excerpt": "",
+    "author": "HQG",
+    "date": "2026-04-22",
+    "readTime": "3 min read",
+    "tags": ["engineering"],
+    "featured": true,
+    "published": false,
+    "markdownFile": "dashboard-updates/hqg-dash-v1.1.1.mdx",
+    "heroImage": null
+  }
+]

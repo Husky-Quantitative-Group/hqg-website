@@ -255,6 +255,13 @@
   line-height: 1.7;
 }
 
+.research-empty-state {
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+}
+
 @media (max-width: 900px) {
   .insights-header {
     flex-direction: column;

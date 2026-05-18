@@ -169,29 +169,6 @@
   font-weight: 600;
 }
 
-.jobs {
-  text-align: center;
-  background: var(--color-bg-alt);
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  border: 1px solid var(--color-border);
-}
-
-.jobs h2 {
-  color: var(--color-text);
-}
-
-.jobs p {
-  font-size: 1.05rem;
-  margin-bottom: 2rem;
-  color: var(--color-muted);
-}
-
-.jobs .cta-button {
-  padding: 14px 32px;
-  font-size: 1.05rem;
-}
-
 @media (max-width: 768px) {
   .team-grid {
     grid-template-columns: 1fr;

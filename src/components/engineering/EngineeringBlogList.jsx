@@ -1,5 +1,6 @@
 import React from 'react';
-import engineeringPosts from '../../data/engineeringPosts';
+import { Link } from 'react-router-dom';
+import blogs from '../../data/blogs.json';
 
 function ArrowUpRightIcon() {
   return (
@@ -36,6 +37,10 @@ function ClockIcon() {
 }
 
 function EngineeringBlogList() {
+  const engineeringPosts = blogs.filter(
+    (post) => post.published && post.tags.some((tag) => tag.toLowerCase() === 'engineering')
+  );
+
   return (
     <section className="engineering-blog">
       <div className="engineering-shell">
@@ -55,42 +60,48 @@ function EngineeringBlogList() {
         </div>
 
         <div className="engineering-post-list">
-          {engineeringPosts.map((post, index) => (
-            <a key={post.id} href="/blog" className="engineering-post-row">
-              <div className="engineering-post-row__index">{String(index + 1).padStart(2, '0')}</div>
-              <div className="engineering-post-row__body">
-                <h3>
-                  <span>{post.title}</span>
-                  <ArrowUpRightIcon />
-                </h3>
-                <p>{post.excerpt}</p>
-                <div className="engineering-post-row__meta">
-                  <span>
-                    <UserIcon />
-                    {post.author}
-                  </span>
-                  <span className="engineering-post-row__separator">|</span>
-                  <span>
-                    <CalendarIcon />
-                    {post.date}
-                  </span>
-                  <span className="engineering-post-row__separator">|</span>
-                  <span>
-                    <ClockIcon />
-                    {post.readTime}
-                  </span>
+          {engineeringPosts.length > 0 ? (
+            engineeringPosts.map((post, index) => (
+              <Link key={post.slug} to={`/blog/${post.slug}`} className="engineering-post-row">
+                <div className="engineering-post-row__index">{String(index + 1).padStart(2, '0')}</div>
+                <div className="engineering-post-row__body">
+                  <h3>
+                    <span>{post.title}</span>
+                    <ArrowUpRightIcon />
+                  </h3>
+                  <p>{post.excerpt}</p>
+                  <div className="engineering-post-row__meta">
+                    <span>
+                      <UserIcon />
+                      {post.author}
+                    </span>
+                    <span className="engineering-post-row__separator">|</span>
+                    <span>
+                      <CalendarIcon />
+                      {post.date}
+                    </span>
+                    <span className="engineering-post-row__separator">|</span>
+                    <span>
+                      <ClockIcon />
+                      {post.readTime}
+                    </span>
+                  </div>
                 </div>
-              </div>
 
-              <div className="engineering-post-row__tags">
-                {post.tags
-                  .filter((tag) => tag !== 'Engineering')
-                  .map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
-              </div>
-            </a>
-          ))}
+                <div className="engineering-post-row__tags">
+                  {post.tags
+                    .filter((tag) => tag.toLowerCase() !== 'engineering')
+                    .map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                </div>
+              </Link>
+            ))
+          ) : (
+            <p className="engineering-post-list__empty">
+              No engineering-tagged posts are published yet.
+            </p>
+          )}
         </div>
       </div>
     </section>

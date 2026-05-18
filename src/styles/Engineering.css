@@ -417,6 +417,11 @@
   flex-direction: column;
 }
 
+.engineering-post-list__empty {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
 .engineering-post-row {
   display: flex;
   align-items: flex-start;

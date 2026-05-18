@@ -1,8 +1,8 @@
 import React from 'react';
 import HomeHeroSection from '../components/home/HomeHeroSection';
 import HomeAboutSection from '../components/home/HomeAboutSection';
+import HomeSponsorsSection from '../components/home/HomeSponsorsSection';
 import HomeBlogHighlightsSection from '../components/home/HomeBlogHighlightsSection';
-import HomeApplySection from '../components/home/HomeApplySection';
 import '../styles/Home.css';
 
 function Home() {
@@ -10,8 +10,8 @@ function Home() {
     <div className="home-page">
       <HomeHeroSection />
       <HomeAboutSection />
+      <HomeSponsorsSection />
       <HomeBlogHighlightsSection />
-      <HomeApplySection />
     </div>
   );
 }

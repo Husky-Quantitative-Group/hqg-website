@@ -8,17 +8,24 @@ const distDir = path.resolve(rootDir, 'dist');
 const ssrEntryPath = path.resolve(rootDir, 'dist-ssr', 'entry-server.js');
 
 const template = await readFile(path.join(distDir, 'index.html'), 'utf-8');
-const researchPostsRaw = await readFile(
-  path.resolve(rootDir, 'src', 'data', 'researchPosts.json'),
+const blogsRaw = await readFile(
+  path.resolve(rootDir, 'src', 'data', 'blogs.json'),
   'utf-8'
 );
-const researchPosts = JSON.parse(researchPostsRaw);
+const blogs = JSON.parse(blogsRaw);
 
 const { render } = await import(pathToFileURL(ssrEntryPath).href);
 
-const staticRoutes = ['/', '/team', '/research', '/software', '/apply', '/engineering', '/blog'];
-const researchRoutes = researchPosts.map((post) => `/research/${post.slug}`);
-const routes = [...staticRoutes, ...researchRoutes];
+const staticRoutes = ['/', '/team', '/research', '/software', '/engineering', '/blog'];
+const blogRoutes = blogs
+  .filter((post) => post.published)
+  .map((post) => `/blog/${post.slug}`);
+const researchRoutes = blogs
+  .filter(
+    (post) => post.published && post.tags.some((tag) => tag.toLowerCase() === 'research')
+  )
+  .map((post) => `/research/${post.slug}`);
+const routes = [...staticRoutes, ...blogRoutes, ...researchRoutes];
 
 for (const url of routes) {
   const appHtml = await render(url);
