@@ -4,10 +4,7 @@ import react from '@vitejs/plugin-react';
 import rehypePrettyCode from 'rehype-pretty-code';
 
 const prettyCodeOptions = {
-  theme: {
-    light: 'github-light',
-    dark: 'github-dark',
-  },
+  theme: 'github-dark',
   keepBackground: false,
 };
 

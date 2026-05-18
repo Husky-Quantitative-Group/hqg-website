@@ -11,39 +11,9 @@ const navLinks = [
   { label: 'GitHub', href: 'https://github.com/Husky-Quantitative-Group', external: true },
 ];
 
-const MoonIcon = () => (
-  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-    <path d="M20.76 15.26A9 9 0 0 1 8.74 3.24 9 9 0 1 0 20.76 15.26z" />
-  </svg>
-);
-
-const SunIcon = () => (
-  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-    <circle cx="12" cy="12" r="4.5" />
-    <path d="M12 1.5v3M12 19.5v3M22.5 12h-3M4.5 12h-3M19.42 4.58l-2.12 2.12M6.7 17.3l-2.12 2.12M19.42 19.42l-2.12-2.12M6.7 6.7L4.58 4.58" />
-  </svg>
-);
-
 function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [dark, setDark] = useState(() => {
-    if (typeof window === 'undefined') {
-      return false;
-    }
-
-    const savedTheme = localStorage.getItem('hqg-theme');
-    if (savedTheme) {
-      return savedTheme === 'dark';
-    }
-
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
-  });
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
-    localStorage.setItem('hqg-theme', dark ? 'dark' : 'light');
-  }, [dark]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -56,7 +26,7 @@ function Navigation() {
       <div className="container site-nav__inner">
         <Link to="/" className="site-nav__brand" onClick={() => setMobileMenuOpen(false)}>
           <img
-            src={dark ? '/alt_logo_no_bg.png' : '/logo.png'}
+            src="/alt_logo_no_bg.png"
             alt="HQG"
             className="site-nav__logo"
           />
@@ -79,26 +49,9 @@ function Navigation() {
           <a href="/#apply" className="site-nav__apply">
             Apply
           </a>
-
-          <button
-            type="button"
-            className="site-nav__theme-toggle"
-            onClick={() => setDark((value) => !value)}
-            aria-label="Toggle theme"
-          >
-            {dark ? <SunIcon /> : <MoonIcon />}
-          </button>
         </div>
 
         <div className="site-nav__mobile-controls">
-          <button
-            type="button"
-            className="site-nav__theme-toggle"
-            onClick={() => setDark((value) => !value)}
-            aria-label="Toggle theme"
-          >
-            {dark ? <SunIcon /> : <MoonIcon />}
-          </button>
           <button
             type="button"
             className={`site-nav__menu-button${mobileMenuOpen ? ' is-open' : ''}`}

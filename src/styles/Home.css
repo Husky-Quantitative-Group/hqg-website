@@ -51,25 +51,6 @@
 .home-hero__pattern {
   position: absolute;
   inset: 0;
-  opacity: 0.12;
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 40px,
-      rgba(28, 25, 23, 0.32) 40px,
-      rgba(28, 25, 23, 0.32) 41px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 40px,
-      rgba(28, 25, 23, 0.32) 40px,
-      rgba(28, 25, 23, 0.32) 41px
-    );
-}
-
-html[data-theme='dark'] .home-hero__pattern {
   opacity: 0.08;
   background-image:
     repeating-linear-gradient(
