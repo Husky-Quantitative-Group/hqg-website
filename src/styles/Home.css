@@ -119,6 +119,44 @@
   gap: 1rem;
 }
 
+.home-hero__discord-link {
+  gap: 0.65rem;
+  border-color: color-mix(in srgb, #5865f2 72%, var(--color-border));
+  background: #5865f2;
+  color: #ffffff;
+  box-shadow: 0 14px 34px color-mix(in srgb, #5865f2 24%, transparent);
+}
+
+.home-hero__discord-link svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: currentColor;
+}
+
+.home-hero__discord-link:hover {
+  background: #4752c4;
+  border-color: #6b74f6;
+}
+
+.home-hero__dashboard-link {
+  gap: 0.65rem;
+  border-color: rgba(255, 250, 241, 0.88);
+  background: #fffaf1;
+  color: #171615;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+}
+
+.home-hero__dashboard-link img {
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
+}
+
+.home-hero__dashboard-link:hover {
+  background: #fffef9;
+  border-color: #fffef9;
+}
+
 .home-hero__media {
   display: flex;
   justify-content: center;
@@ -719,6 +757,15 @@
 }
 
 @media (max-width: 560px) {
+  .home-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-hero__actions .site-button {
+    width: 100%;
+  }
+
   .home-stats {
     grid-template-columns: 1fr;
   }
