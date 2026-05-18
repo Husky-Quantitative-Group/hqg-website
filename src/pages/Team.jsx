@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Team.css';
-import quantGroupS26 from '../assets/groupshots/quant-group-s26.png';
+import hqgFullTeamSpr26 from '../assets/groupshots/hqg-full-team-spr26.JPG';
 import leadership from '../data/leadership.json';
 import members from '../data/members.json';
 import alumni from '../data/alumni.json';
@@ -45,7 +45,7 @@ function Team() {
       <div className="container">
         <h1>Our Team</h1>
         <div className="team-photo">
-          <img src={quantGroupS26} alt="Husky Quantitative Group, Spring 2026" />
+          <img src={hqgFullTeamSpr26} alt="Husky Quantitative Group, Spring 2026" />
         </div>
 
         <section className="team-section">

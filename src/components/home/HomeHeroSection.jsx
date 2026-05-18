@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import presentation1 from '../../assets/groupshots/presentation1.jpg';
 import presentation3 from '../../assets/groupshots/presentation3.jpg';
 import PlacementTicker from './PlacementTicker';
 
@@ -97,29 +96,16 @@ function HomeHeroSection() {
           </div>
 
           <div className="home-hero__media" aria-hidden="true">
-            <div className="home-hero__polaroids">
-              <motion.div
-                initial={{ opacity: 0, x: 60 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, delay: 0.5 }}
-                className="home-hero__polaroid home-hero__polaroid--left"
-              >
-                <div className="home-hero__polaroid-frame">
-                  <img src={presentation1} alt="" />
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 80 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, delay: 0.7 }}
-                className="home-hero__polaroid home-hero__polaroid--right"
-              >
-                <div className="home-hero__polaroid-frame home-hero__polaroid-frame--front">
-                  <img src={presentation3} alt="" />
-                </div>
-              </motion.div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, x: 80 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.6 }}
+              className="home-hero__photo"
+            >
+              <div className="home-hero__photo-frame">
+                <img src={presentation3} alt="" />
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

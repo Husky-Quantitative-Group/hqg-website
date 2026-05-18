@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import presentation2 from '../../assets/groupshots/presentation2.jpg';
+import hqgShakespeare from '../../assets/groupshots/hqg-shakespeare.JPG';
 
 const pillars = [
   {
@@ -53,8 +53,8 @@ function HomeAboutSection() {
               className="home-about__image-wrap"
             >
               <img
-                src={presentation2}
-                alt="HQG members presenting quantitative strategies"
+                src={hqgShakespeare}
+                alt="HQG members outside Shakespeare Theatre"
                 className="home-about__image"
               />
             </motion.div>
