@@ -1,8 +1,66 @@
 [
   {
+    "name": "Brendan Barnett",
+    "graduationYear": 2026,
+    "currentRole": "Software Engineer at SpaceX",
+    "formerRole": "Founder, Advisor",
+    "linkedin": "https://www.linkedin.com/in/brendanabarnett/",
+    "github": "https://github.com/brendanabarnett"
+  },
+  {
+    "name": "Ethan Carty",
+    "graduationYear": 2026,
+    "currentRole": "",
+    "formerRole": "Quant Research Lead",
+    "linkedin": "https://www.linkedin.com/in/ethan-carty/",
+    "github": "https://github.com/EthanXC"
+  },
+  {
+    "name": "Ethan Thomas",
+    "graduationYear": 2026,
+    "currentRole": "",
+    "formerRole": "Developer",
+    "linkedin": "https://www.linkedin.com/in/ethanthomas0/",
+    "github": "https://github.com/ethant0123"
+  },
+  {
+    "name": "Grace McPadden",
+    "graduationYear": 2026,
+    "currentRole": "",
+    "formerRole": "Researcher",
+    "linkedin": "https://www.linkedin.com/in/grace-mcpadden/",
+    "github": "https://github.com/GraceMcPadden2"
+  },
+  {
+    "name": "Josef Karpinski",
+    "graduationYear": 2026,
+    "currentRole": "",
+    "formerRole": "Engineering Lead",
+    "linkedin": "https://www.linkedin.com/in/josefkarpinski/",
+    "github": "https://github.com/josef-karpinski"
+  },
+  {
+    "name": "Katrina Melnik",
+    "graduationYear": 2026,
+    "currentRole": "",
+    "formerRole": "Researcher",
+    "linkedin": "https://www.linkedin.com/in/katrina-melnik-b4b559241/",
+    "github": "https://github.com/katmlnk"
+  },
+  {
     "name": "Krish Shah",
     "graduationYear": 2026,
     "currentRole": "Software Engineer at Capital One",
-    "linkedin": "https://www.linkedin.com/in/krish-d-shah/"
+    "formerRole": "",
+    "linkedin": "https://www.linkedin.com/in/krish-d-shah/",
+    "github": "https://github.com/kri-shah"
+  },
+  {
+    "name": "Micah Banschick",
+    "graduationYear": 2026,
+    "currentRole": "",
+    "formerRole": "Researcher",
+    "linkedin": "https://www.linkedin.com/in/micah-banschick/",
+    "github": "https://github.com/micahabanschick"
   }
 ]

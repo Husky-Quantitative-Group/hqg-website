@@ -129,8 +129,7 @@ function Team() {
           </div>
         </section>
 
-        {/*uncomment below in May 2026*/}
-        {/*<section className="team-section">
+        <section className="team-section">
           <h2>Alumni</h2>
           <div className="alumni-list">
             {alumni.map((alum, idx) => {
@@ -146,18 +145,18 @@ function Team() {
               return (
                 <Wrapper
                   key={idx}
-                  className={`alumni-card${alum.linkedin ? ' team-card-link' : ''}`}
+                  className={`alumni-card${alum.linkedin ? ' alumni-card-link' : ''}`}
                   {...wrapperProps}
                 >
-                <h3>{alum.name}</h3>
-                <p>Class of {alum.graduationYear}</p>
-                <p className="current-role">{alum.currentRole}</p>
+                  <p className="alumni-year">Class of {alum.graduationYear}</p>
+                  <h3>{alum.name}</h3>
+                  {alum.formerRole && <p className="former-role">Former {alum.formerRole}</p>}
+                  {alum.currentRole && <p className="current-role">{alum.currentRole}</p>}
                 </Wrapper>
               );
             })}
           </div>
         </section>
-      */}
 
       </div>
     </div>

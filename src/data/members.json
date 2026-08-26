@@ -1,10 +1,24 @@
 [
   {
+    "name": "Aaron Mark",
+    "role": "Developer",
+    "headshot": "aaron-mark.jpg",
+    "linkedin": "https://www.linkedin.com/in/aaronmark05/",
+    "github": "https://github.com/aaron193"
+  },
+  {
     "name": "Albert Mundadan",
     "role": "Developer",
     "headshot": "albert-mundadan.png",
     "linkedin": "https://www.linkedin.com/in/albert-mundadan/",
     "github": "https://github.com/AlbertMundadan"
+  },
+  {
+    "name": "David Matos",
+    "role": "Developer",
+    "headshot": "",
+    "linkedin": "",
+    "github": "https://github.com/ILuv-2Code"
   },
   {
     "name": "Emmet Spaeth",
@@ -14,32 +28,11 @@
     "github": "https://github.com/mineable3"
   },
   {
-    "name": "Ethan Thomas",
-    "role": "Developer",
-    "headshot": "ethan-thomas.png",
-    "linkedin": "https://www.linkedin.com/in/ethanthomas0/",
-    "github": "https://github.com/ethant0123"
-  },
-  {
-    "name": "Grace McPadden",
+    "name": "Nathaniel Wheeler",
     "role": "Researcher",
-    "headshot": "grace-mcpadden.png",
-    "linkedin": "https://www.linkedin.com/in/grace-mcpadden/",
-    "github": "https://github.com/GraceMcPadden2"
-  },
-  {
-    "name": "Katrina Melnik",
-    "role": "Researcher",
-    "headshot": "katrina-melnik.jpg",
-    "linkedin": "https://www.linkedin.com/in/katrina-melnik-b4b559241/",
-    "github": "https://github.com/katmlnk"
-  },
-  {
-    "name": "Micah Banschick",
-    "role": "Researcher",
-    "headshot": "micah-banschick.png",
-    "linkedin": "https://www.linkedin.com/in/micah-banschick/",
-    "github": "https://github.com/micahabanschick"
+    "headshot": "",
+    "linkedin": "https://www.linkedin.com/in/nathanielwheeler8/",
+    "github": ""
   },
   {
     "name": "Parth Danve",
@@ -47,6 +40,13 @@
     "headshot": "parth-danve.jpg",
     "linkedin": "https://www.linkedin.com/in/parthdanve39/",
     "github": "https://github.com/pdd23001"
+  },
+  {
+    "name": "Shai Verma",
+    "role": "Researcher",
+    "headshot": "",
+    "linkedin": "https://www.linkedin.com/in/shai-verma/",
+    "github": ""
   },
   {
     "name": "Shawn Spitzel",
