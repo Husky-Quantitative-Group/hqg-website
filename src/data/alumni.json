@@ -1,8 +1,50 @@
 [
   {
+    "name": "Ethan Carty",
+    "graduationYear": 2026,
+    "currentRole": "",
+    "formerRole": "Researcher",
+    "linkedin": "https://www.linkedin.com/in/ethanthomas0/",
+    "github": "https://github.com/ethant0123"
+  },
+  {
+    "name": "Ethan Thomas",
+    "graduationYear": 2026,
+    "currentRole": "",
+    "formerRole": "Developer",
+    "linkedin": "https://www.linkedin.com/in/ethanthomas0/",
+    "github": "https://github.com/ethant0123"
+  },
+  {
+    "name": "Grace McPadden",
+    "graduationYear": 2026,
+    "currentRole": "",
+    "formerRole": "Researcher",
+    "linkedin": "https://www.linkedin.com/in/grace-mcpadden/",
+    "github": "https://github.com/GraceMcPadden2"
+  },
+  {
+    "name": "Katrina Melnik",
+    "graduationYear": 2026,
+    "currentRole": "",
+    "formerRole": "Researcher",
+    "linkedin": "https://www.linkedin.com/in/katrina-melnik-b4b559241/",
+    "github": "https://github.com/katmlnk"
+  },
+  {
     "name": "Krish Shah",
     "graduationYear": 2026,
     "currentRole": "Software Engineer at Capital One",
-    "linkedin": "https://www.linkedin.com/in/krish-d-shah/"
+    "formerRole": "",
+    "linkedin": "https://www.linkedin.com/in/krish-d-shah/",
+    "github": "https://github.com/kri-shah"
+  },
+  {
+    "name": "Micah Banschick",
+    "graduationYear": 2026,
+    "currentRole": "",
+    "formerRole": "Researcher",
+    "linkedin": "https://www.linkedin.com/in/micah-banschick/",
+    "github": "https://github.com/micahabanschick"
   }
 ]

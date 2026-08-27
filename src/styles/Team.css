@@ -143,30 +143,64 @@
 .alumni-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .alumni-card {
   background: var(--color-surface);
-  padding: 1.5rem;
-  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
   border: 1px solid var(--color-border);
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.alumni-card-link {
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.alumni-card-link:hover {
+  transform: translateY(-4px);
+  background: var(--color-surface-elevated);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.alumni-card-link:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 3px;
 }
 
 .alumni-card h3 {
   color: var(--color-text);
-  margin-bottom: 0.5rem;
+  margin: 0.35rem 0 0.6rem;
 }
 
 .alumni-card p {
   color: var(--color-muted);
   font-size: 0.9rem;
-  margin-bottom: 0.3rem;
+  margin: 0;
+}
+
+.alumni-card .alumni-year,
+.alumni-card .former-role {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.alumni-card .former-role {
+  margin-top: auto;
 }
 
 .alumni-card .current-role {
   color: var(--color-text);
   font-weight: 600;
+  margin-top: auto;
 }
 
 @media (max-width: 768px) {
